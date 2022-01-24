@@ -3,6 +3,11 @@
 print("Welcome to Artemis, your personal AI assistant.")
 print("Please wait while I load my knowledge base.")
 
+#randomness
+numbers = ["1", "2", "3", "4", "5","6","7","8","9","10"]
+letters = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+
 # Imports
 import os
 import sys
@@ -41,7 +46,13 @@ while command != "quit":
         print("Here is a list of commands:")
         print("'Hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
+        print("'open' - Opens a website.")
         print("'quit' - Quits the program.")
+        print("'random' - Gives a random number.")
+        command = input("Command: ")
+
+    if command == "give me a random number" or command == "give me a random number between 1 and 10" or command == "I want a random number" or command == "I want a random number between 1 and 10" or command == "random":
+        print(random.choice(numbers))
         command = input("Command: ")
     
     else:
