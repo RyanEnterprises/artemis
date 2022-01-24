@@ -1,4 +1,4 @@
-# Contributor Covenant Code of Conduct
+# ARTEMIS© Code of Conduct
 
 ## Our Pledge
 
