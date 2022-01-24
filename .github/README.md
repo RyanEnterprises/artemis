@@ -9,3 +9,6 @@ An AI that adapts to you.
 
 ## INSTALLATION
 
+### GitHub Releases Page (Recommended)
+
+### Trunk Builds (Experimental) (Not Recommended)
