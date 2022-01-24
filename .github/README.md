@@ -11,6 +11,8 @@ An AI that adapts to you.
 
 ### GitHub Releases Page (Recommended)
 
+Navigate to the [GitHub Releases Page](https://github.com/RyanEnterprises/artemis/releases) and 
+
 ### Trunk Builds (Experimental) (Not Recommended)
 
 ## CONTRIBUTION
