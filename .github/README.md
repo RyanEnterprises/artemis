@@ -1,4 +1,4 @@
-# ARTEMIS©
+# ARTEMIS
 
 ## DESCRIPTION
 An AI that adapts to you.
