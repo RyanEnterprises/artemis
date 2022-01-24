@@ -40,6 +40,8 @@ while command != "quit":
     if command == "help":
         print("Here is a list of commands:")
         print("'Hello' - Say hello to me.")
+        print("'help' - Shows a list of avalible commands")
+        print("'quit' - Quits the program.")
         command = input("Command: ")
     
     else:
