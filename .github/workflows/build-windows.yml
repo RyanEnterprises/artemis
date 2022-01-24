@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: '3.10.1'
           architecture: 'x64'
-      - run: python my_script.py
+      - run: python artemis.py
       - run: pyinstaller --noconfirm --onefile --console  "artemis.py"
