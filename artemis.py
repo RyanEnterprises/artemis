@@ -6,6 +6,7 @@ print("Please wait while I load my knowledge base.")
 #randomness
 numbers = ["1", "2", "3", "4", "5","6","7","8","9","10"]
 letters = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+coin = ["Heads", "Tails"]
 
 
 # Imports
@@ -44,6 +45,7 @@ while command != "quit":
 
     if command == "help":
         print("Here is a list of commands:")
+        print("'flip' - flips a coin")
         print("'Hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
         print("'open' - Opens a website.")
@@ -53,6 +55,10 @@ while command != "quit":
 
     if command == "give me a random number" or command == "give me a random number between 1 and 10" or command == "I want a random number" or command == "I want a random number between 1 and 10" or command == "random":
         print(random.choice(numbers))
+        command = input("Command: ")
+
+    if command == "Flip a Coin" or command == "flip a coin" or command == "flip a coin for me" or command == "flip coin" or command == "flip":
+        print(random.choice(coin))
         command = input("Command: ")
     
     else:
