@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.github\\workflows"
+    ""
   ],
-  "SelectedNode": "\\.github",
+  "SelectedNode": "\\artemis.py",
   "PreviewInSolutionExplorer": false
 }
