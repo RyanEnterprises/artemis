@@ -12,3 +12,7 @@ An AI that adapts to you.
 ### GitHub Releases Page (Recommended)
 
 ### Trunk Builds (Experimental) (Not Recommended)
+
+## CONTRIBUTION
+
+
