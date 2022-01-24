@@ -4,7 +4,6 @@ print("Welcome to Artemis, your personal AI assistant.")
 print("Please wait while I load my knowledge base.")
 
 # Imports
-from distutils import command
 import os
 import sys
 import time
@@ -22,6 +21,7 @@ import urllib.error
 import urllib.request
 
 print("Begin by typing a command or saying something.")
+print("TIP: You can always type 'quit' to exit the program.")
 command = input("Command: ")
 
 # Begin the main loop
@@ -32,5 +32,9 @@ while command != "quit":
 
     if command == "Hello":
         print("Hello, how are you today?")
+        command = input("Command: ")
+    
+    else:
+        print("I'm sorry, I don't understand that command.")
         command = input("Command: ")
 
