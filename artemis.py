@@ -20,8 +20,11 @@ import urllib.parse
 import urllib.error
 import urllib.request
 
+## Startup Stuff
+
 print("Begin by typing a command or saying something.")
 print("TIP: You can always type 'quit' to exit the program.")
+print("TIP: You can always type 'help' to see a list of commands.")
 command = input("Command: ")
 
 # Begin the main loop
@@ -33,8 +36,13 @@ while command != "quit":
     if command == "Hello":
         print("Hello, how are you today?")
         command = input("Command: ")
+
+    if command == "help":
+        print("Here is a list of commands:")
+        print("'Hello' - Say hello to me.")
+        command = input("Command: ")
     
     else:
-        print("I'm sorry, I don't understand that command.")
+        print("I'm sorry, I don't understand that command yet. However, I am always growing")
         command = input("Command: ")
 
