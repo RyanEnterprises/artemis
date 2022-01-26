@@ -95,6 +95,8 @@ import urllib.request
 import urllib.parse
 import urllib.error
 import urllib.request
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import *
 
 ## Startup Stuff
 
