@@ -7,6 +7,30 @@ print("Please wait while I load my knowledge base.")
 
 versionNumber = "1.0"
 
+jokes = [
+    "What do you call a fake noodle? An Impasta.",
+    "Why did the python cross the road? To eat the chicken.",
+]
+
+gretings = [
+    "Hello",
+    "Hi",
+    "Hey",
+    "Howdy",
+    "Greetings",
+    "Good day",
+    "Good morning",
+    "Good afternoon",
+    "Good evening",
+    "Good night",
+    "Good luck",
+    "Good luck on your journey",
+    "May the force be with you",
+    "How are you doing today?",
+    "How are you doing?",
+    "How are you?",
+]
+
 numbers = [
     "1",
     "2",
@@ -86,7 +110,7 @@ while command != "quit":
         command = input("Command: ")
 
     if command == "Hello":
-        print("Hello, how are you today?")
+        print(random.choice(gretings))
         command = input("Command: ")
 
     if command == "help":
