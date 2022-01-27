@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\artemis.py",
+  "SelectedNode": "\\src\\know.py",
   "PreviewInSolutionExplorer": false
 }
