@@ -158,6 +158,7 @@ while command != "quit":
         features="html.parser"
         page = requests.get(wikipedia.page(know).url)
         soup = BeautifulSoup(page.content, features)
+        features="html.parser"
         print(soup.get_text())
         command = input("Command: ")
 
