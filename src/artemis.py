@@ -154,14 +154,7 @@ while command != "quit":
         command = input("Command: ")
 
     if command == "know":
-        print("What do you want to know?")
-        know = input("HERE: ")
-        print(wikipedia.summary(know))
-        features="html.parser"
-        page = requests.get(wikipedia.page(know).url)
-        soup = BeautifulSoup(page.content, features)
-        features="html.parser"
-        print(soup.get_text())
+        import know
         command = input("Command: ")
 
     if command == "play":
