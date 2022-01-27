@@ -1,5 +1,7 @@
 # ARTEMIS
 
+<img width="500px" src="images/../../images/ArtemisLockupBlackstd.svg">
+
 ## DESCRIPTION
 An AI that adapts to you.
 
