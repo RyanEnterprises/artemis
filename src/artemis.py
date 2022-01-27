@@ -98,6 +98,7 @@ import urllib.request
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import *
 
+
 ## Startup Stuff
 
 print("Begin by typing a command or saying something.")
@@ -119,6 +120,7 @@ while command != "quit":
         print("Here is a list of commands:")
         print("'artemis' - Gives you the current version number.")
         print("'flip' - flips a coin")
+        print("'game' - Starts a game")
         print("'Hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
         print("'know' - Gives a summary from wikipedia about a topic")
@@ -166,6 +168,10 @@ while command != "quit":
         print("What song do you want to play? TIP: It has to be on your computer.")
         song = input("Song: ")
         os.system("mpg321 " + song)
+        command = input("Command: ")
+
+    if command == "game":
+        import triviagame
         command = input("Command: ")
 
     if command == "prank":
