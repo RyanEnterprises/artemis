@@ -157,6 +157,8 @@ while command != "quit":
         print("'random' - Gives a random number.")
         print("'search' - Searches google for a topic.")
         print("'system' - Enters system mode")
+        print("'weather' - Gives you the weather for a location")
+        print("'write' - Writes a paragraph based off of one or a few words provided by you using advanced AI courtsy of DeepAI")
         print("'zen' - Gives you a very zen poem.")
         command = input("Command: ")
 
@@ -202,6 +204,10 @@ while command != "quit":
 
     if command == "game":
         import triviagame
+        command = input("Command: ")
+
+    if command == "write":
+        import writer
         command = input("Command: ")
 
     if command == "prank":
