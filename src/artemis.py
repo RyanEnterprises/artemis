@@ -7,6 +7,30 @@ print("Please wait while I load my knowledge base.")
 
 versionNumber = "1.0.1"
 
+facts = [
+    "I was created by a programmer named Ryan.",
+    "I was created in 2022.",
+    "The world's oldest wooden wheel has been around for more than 5,000 years",
+    "Dead skin cells are a main ingredient in household dust",
+    "Sudan has more pyramids than any country in the world",
+    "The average person walks the equivalent of three times around the world in their lifetime",
+    "The bumblebee bat is the world's smallest mammal",
+    "The circulatory system is more than 60,000 miles long",
+    "There are parts of Africa in all four hemispheres",
+    "The cornea is one of only two parts of the human body without blood vessels",
+    "The world's first animated feature film was made in Argentina",
+    "German chocolate cake was invented in Texas",
+    "The Philippines consists of 7,641 islands",
+    "A one-way trip on the Trans-Siberian Railway involves crossing 3,901 bridges",
+    "There's enough gold inside Earth to coat the planet",
+    "Cleveland was once the country's fifth-largest city",
+    "The brand name Spam is a combination of “spice” and “ham",
+    "The first person to walk on the moon was Buzz Aldrin",
+    "It takes a drop of water 90 days to travel the entire Mississippi River",
+    "Lemons float, but limes sink"
+
+]
+
 jokes = [
     "What do you call a fake noodle? An Impasta.",
     "Why did the python cross the road? To eat the chicken.",
@@ -119,11 +143,13 @@ while command != "quit":
     if command == "help":
         print("Here is a list of commands:")
         print("'artemis' - Gives you the current version number.")
+        print("'fact' - Gives you a random fact")
         print("'flip' - flips a coin")
         print("'game' - Starts a game")
         print("'Hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
         print("'know' - Gives a summary from wikipedia about a topic")
+        print("'motivate' - Gives you a motivational quote, using our sister service, '(de)Motivator'")
         print("'open' - Opens a website.")
         print("'play' - Plays a song.")
         print("'prank' - It's a suprise.")
@@ -156,6 +182,10 @@ while command != "quit":
         print("Thank you for using Artemis.")
         command = input("Command: ")
 
+    if command == "fact":
+        print(random.choice(facts))
+        command = input("Command: ")
+
     if command == "know":
         import know
         command = input("Command: ")
@@ -164,6 +194,10 @@ while command != "quit":
         print("What song do you want to play? TIP: It has to be on your computer.")
         song = input("Song: ")
         os.system("mpg321 " + song)
+        command = input("Command: ")
+
+    if command == "motivate":
+        webbrowser.open("https://porkyproductions.github.io/deMotivator/")
         command = input("Command: ")
 
     if command == "game":
