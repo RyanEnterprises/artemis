@@ -129,6 +129,9 @@ while command != "quit":
         print("'prank' - It's a suprise.")
         print("'quit' - Quits the program.")
         print("'random' - Gives a random number.")
+        print("'search' - Searches google for a topic.")
+        print("'system' - Enters system mode")
+        print("'zen' - Gives you a very zen poem.")
         command = input("Command: ")
 
     if command == "give me a random number" or command == "give me a random number between 1 and 10" or command == "I want a random number" or command == "I want a random number between 1 and 10" or command == "random":
@@ -169,6 +172,20 @@ while command != "quit":
 
     if command == "prank":
         webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        command = input("Command: ")
+
+    if command == "system":
+        import system
+        command = input("Command: ")
+
+    if command == "search":
+        print("What do you want to search for?")
+        search = input("Search: ")
+        webbrowser.open("https://www.google.com/search?q=" + search)
+        command = input("Command: ")
+
+    if command == "zen":
+        import this
         command = input("Command: ")
     
     
