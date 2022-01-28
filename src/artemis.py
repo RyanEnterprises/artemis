@@ -157,8 +157,6 @@ while command != "quit":
         print("'random' - Gives a random number.")
         print("'search' - Searches google for a topic.")
         print("'system' - Enters system mode")
-        print("'weather' - Gives you the weather for a location")
-        print("'write' - Writes a paragraph based off of one or a few words provided by you using advanced AI courtsy of DeepAI")
         print("'zen' - Gives you a very zen poem.")
         command = input("Command: ")
 
@@ -207,8 +205,15 @@ while command != "quit":
         command = input("Command: ")
 
     if command == "write":
-        import writer
-        command = input("Command: ")
+            r = requests.post(
+        "https://api.deepai.org/api/text-generator",
+        data={
+            'text': input("What do you want to write? "),
+        },
+        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+    )
+    print(r.json()['output'])
+    command = input("Command: ")
 
     if command == "prank":
         webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
