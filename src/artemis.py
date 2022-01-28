@@ -5,7 +5,7 @@ print("Please wait while I load my knowledge base.")
 
 #variables
 
-versionNumber = "1.0"
+versionNumber = "1.0.1"
 
 jokes = [
     "What do you call a fake noodle? An Impasta.",
