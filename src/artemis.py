@@ -191,9 +191,9 @@ while command != "quit":
         command = input("Command: ")
 
     if command == "play":
-        print("What song do you want to play? TIP: It has to be on your computer.")
+        print("What song do you want to play? TIP: It has to be on your computer WITH the file extension. EX: 'Never Gonna Give You Up.mp4'")
         song = input("Song: ")
-        os.system("mpg321 " + song)
+        os.system("start " + song)
         command = input("Command: ")
 
     if command == "motivate":
