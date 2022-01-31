@@ -196,6 +196,19 @@ while command != "quit":
         os.system("start " + song)
         command = input("Command: ")
 
+    if command == "loop":
+        print("WARNING: This will send your device into an infinite loop, and you will need to restart the program to go back to normaal.")
+        print("Are you sure you want to do this?")
+        print("Type 'yes' to continue.")
+        print("Type 'no' to cancel.")
+        loop = input("Command: ")
+        if loop == "yes":
+            while True:
+                print(random.choice(gretings) + " " + random.choice(gretings) + " " + random.choice(letters) + " " + random.choice(facts) + " " + random.choice(numbers) + " " + random.choice(coin))
+        elif loop == "no":
+            print("Canceled.")
+            command = input("Command: ")
+
     if command == "motivate":
         webbrowser.open("https://porkyproductions.github.io/deMotivator/")
         command = input("Command: ")
