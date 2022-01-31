@@ -204,17 +204,6 @@ while command != "quit":
         import triviagame
         command = input("Command: ")
 
-    if command == "write":
-            r = requests.post(
-        "https://api.deepai.org/api/text-generator",
-        data={
-            'text': input("What do you want to write? "),
-        },
-        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
-    )
-    print(r.json()['output'])
-    command = input("Command: ")
-
     if command == "prank":
         webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         command = input("Command: ")
@@ -228,6 +217,17 @@ while command != "quit":
         search = input("Search: ")
         webbrowser.open("https://www.google.com/search?q=" + search)
         command = input("Command: ")
+
+    if command == "write":
+        r = requests.post(
+        "https://api.deepai.org/api/text-generator",
+        data={
+            'text': input("What do you want to write? "),
+        },
+        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+    )
+    print(r.json()['output'])
+    command = input("Command: ")
 
     if command == "zen":
         import this
