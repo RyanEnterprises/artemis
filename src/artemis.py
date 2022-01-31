@@ -149,6 +149,7 @@ while command != "quit":
         print("'Hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
         print("'know' - Gives a summary from wikipedia about a topic")
+        print("'loop' - sends your device into an infinite loop")
         print("'motivate' - Gives you a motivational quote, using our sister service, '(de)Motivator'")
         print("'open' - Opens a website.")
         print("'play' - Plays a song.")
