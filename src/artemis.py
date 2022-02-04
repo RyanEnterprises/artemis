@@ -142,6 +142,7 @@ while command != "quit":
 
     if command == "help":
         print("Here is a list of commands:")
+        print("'QnA' - Ask a question and get an answer.")
         print("'artemis' - Gives you the current version number.")
         print("'fact' - Gives you a random fact")
         print("'flip' - flips a coin")
