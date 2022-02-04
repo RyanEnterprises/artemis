@@ -166,6 +166,10 @@ while command != "quit":
         print(random.choice(numbers))
         command = input("Command: ")
 
+    if command == "QnA":
+        import QnA
+        command = input("Command: ")
+
     if command == "Flip a Coin" or command == "flip a coin" or command == "flip a coin for me" or command == "flip coin" or command == "flip":
         print(random.choice(coin))
         command = input("Command: ")
@@ -226,6 +230,7 @@ while command != "quit":
     if command == "system":
         import system
         command = input("Command: ")
+    
 
     if command == "search":
         print("What do you want to search for?")
