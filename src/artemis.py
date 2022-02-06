@@ -4,7 +4,7 @@ print("Welcome to Artemis, your personal AI assistant.")
 print("Please wait while I load my knowledge base.")
 
 print("Let's begin by selecting your input method.")
-print("Type 'voice' to use your voice.")
+print("Type 'voice' to use your voice. TIP: Only use this if you have the PyAudio module installed.")
 print("Type 'text' to type your input.")
 
 inputMethod = input("Input method: ")
