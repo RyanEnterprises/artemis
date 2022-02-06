@@ -3,7 +3,7 @@
 # Variables
 #variables
 
-versionNumber = "1.0.1"
+versionNumber = "2.0.0"
 
 facts = [
     "I was created by a programmer named Ryan.",
@@ -149,14 +149,14 @@ while audio != "quit":
             audio = r.listen(source)
             print("Done!")
     if audio == "help":
-        print("Here is a list of commands:")
+        print("Here is a list of audios:")
         print("'QnA' - Ask a question and get an answer.")
         print("'artemis' - Gives you the current version number.")
         print("'fact' - Gives you a random fact")
         print("'flip' - flips a coin")
         print("'game' - Starts a game")
         print("'Hello' - Say hello to me.")
-        print("'help' - Shows a list of avalible commands")
+        print("'help' - Shows a list of avalible audios")
         print("'know' - Gives a summary from wikipedia about a topic")
         print("'loop' - sends your device into an infinite loop")
         print("'motivate' - Gives you a motivational quote, using our sister service, '(de)Motivator'")
@@ -173,79 +173,99 @@ while audio != "quit":
             audio = r.listen(source)
             print("Done!")
 
-    if command == "give me a random number" or command == "give me a random number between 1 and 10" or command == "I want a random number" or command == "I want a random number between 1 and 10" or command == "random":
+    if audio == "give me a random number" or audio == "give me a random number between 1 and 10" or audio == "I want a random number" or audio == "I want a random number between 1 and 10" or audio == "random":
         print(random.choice(numbers))
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "Flip a Coin" or command == "flip a coin" or command == "flip a coin for me" or command == "flip coin" or command == "flip":
+    if audio == "Flip a Coin" or audio == "flip a coin" or audio == "flip a coin for me" or audio == "flip coin" or audio == "flip":
         print(random.choice(coin))
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "open":
+    if audio == "open":
         print("What website do you want to open?")
         website = input("Website: ")
         webbrowser.open(website)
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == 'artemis' or command == 'version' or command == 'version number' or command == 'version number for me' or command == 'about':
+    if audio == 'artemis' or audio == 'version' or audio == 'version number' or audio == 'version number for me' or audio == 'about':
         print("Artemis" + " " + versionNumber)
         print("Artemis is a personal AI assistant.")
         print("It is a work in progress and is still in development.")
         print("If you have any suggestions or feedback, please let me know.")
         print("Thank you for using Artemis.")
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "fact":
+    if audio == "fact":
         print(random.choice(facts))
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "know":
+    if audio == "know":
         import know
-        command = input("Command: ")
+        audio = input("audio: ")
 
-    if command == "play":
+    if audio == "play":
         print("What song do you want to play? TIP: It has to be on your computer WITH the file extension. EX: 'Never Gonna Give You Up.mp4'")
         song = input("Song: ")
         os.system("start " + song)
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "loop":
-        print("WARNING: This will send your device into an infinite loop, and you will need to restart the program to go back to normaal.")
-        print("Are you sure you want to do this?")
-        print("Type 'yes' to continue.")
-        print("Type 'no' to cancel.")
-        loop = input("Command: ")
-        if loop == "yes":
-            while True:
-                print(random.choice(gretings) + " " + random.choice(gretings) + " " + random.choice(letters) + " " + random.choice(facts) + " " + random.choice(numbers) + " " + random.choice(coin))
-        elif loop == "no":
-            print("Canceled.")
-            command = input("Command: ")
-
-    if command == "motivate":
+    if audio == "motivate":
         webbrowser.open("https://porkyproductions.github.io/deMotivator/")
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "game":
+    if audio == "game":
         import triviagame
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "prank":
+    if audio == "prank":
         webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "system":
+    if audio == "system":
         import system
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
     
 
-    if command == "search":
+    if audio == "search":
         print("What do you want to search for?")
         search = input("Search: ")
         webbrowser.open("https://www.google.com/search?q=" + search)
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "write":
+    if audio == "write":
         r = requests.post(
         "https://api.deepai.org/api/text-generator",
         data={
@@ -254,15 +274,24 @@ while audio != "quit":
         headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
     )
     print(r.json()['output'])
-    command = input("Command: ")
+    with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
 
-    if command == "zen":
+    if audio == "zen":
         import this
-        command = input("Command: ")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
     
     
     else:
-        print("I'm sorry, I don't understand that command yet. However, I am always growing")
-        command = input("Command: ")
+        print("I'm sorry, I don't understand that audio yet. However, I am always growing")
+        with mic as source:
+            print("Say something!")
+            audio = r.listen(source)
+            print("Done!")
     
 

@@ -1,6 +1,6 @@
 #variables
 
-versionNumber = "1.0.1"
+versionNumber = "2.0.0"
 
 facts = [
     "I was created by a programmer named Ryan.",
