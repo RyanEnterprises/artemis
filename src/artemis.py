@@ -104,7 +104,6 @@ coin = [
 
 # Imports
 import os
-import sys
 import time
 import random
 from bs4 import BeautifulSoup
@@ -164,10 +163,6 @@ while command != "quit":
 
     if command == "give me a random number" or command == "give me a random number between 1 and 10" or command == "I want a random number" or command == "I want a random number between 1 and 10" or command == "random":
         print(random.choice(numbers))
-        command = input("Command: ")
-
-    if command == "QnA":
-        import QnA
         command = input("Command: ")
 
     if command == "Flip a Coin" or command == "flip a coin" or command == "flip a coin for me" or command == "flip coin" or command == "flip":
