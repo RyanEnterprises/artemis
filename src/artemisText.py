@@ -223,23 +223,23 @@ while command != "quit":
         webbrowser.open("https://www.google.com/search?q=" + search)
         command = input("Command: ")
 
-    if command == "write":
-        r = requests.post(
-        "https://api.deepai.org/api/text-generator",
-        data={
-            'text': input("What do you want to write? "),
-        },
-        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
-    )
-    print(r.json()['output'])
-    command = input("Command: ")
-
     if command == "zen":
         import this
         command = input("Command: ")
-    
+    # Uncomment if you want to use this, it only works sometimes
+    #if command == "write":
+        #r = requests.post(
+        #"https://api.deepai.org/api/text-generator",
+        #data={
+            #'text': input("What do you want to write? "),
+        #},
+        #headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+    #)
+    #print(r.json()['output'])
+    #command = input("Command: ")
     
     else:
         print("I'm sorry, I don't understand that command yet. However, I am always growing")
         command = input("Command: ")
+
 
