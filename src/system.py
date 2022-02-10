@@ -13,17 +13,19 @@ import speech_recognition as sr
 import webbrowser
 import requests
 import json
+import chalk
 
 sysCommand = input("Type a command: ")
 
 
 while sysCommand != "exit":
-    if sysCommand == "":
-        print ("You cannot say nothing.")
+    if sysCommand == "" or sysCommand == " ":
+        print (chalk.red("You cannot say nothing."))
         sysCommand = input("Type a command: ")
     if sysCommand == "help":
         print ("Here are the commands you can use:")
         print ("'exit' - Exits the program.")
+        print ("'explorer' - Opens the default file manager on windows")
         print ("'help' - Displays this message.")
         print ("'registry' - Opens the registry.")
         print ("'system' - Opens the system.")
@@ -67,6 +69,10 @@ while sysCommand != "exit":
     if sysCommand == "power":
         print ("Opening power...")
         os.system("start control")
+        sysCommand = input("Type a command: ")
+    if sysCommand == "explorer":
+        print("Opening Explorer")
+        os.system("start explorer")
         sysCommand = input("Type a command: ")
     if sysCommand == "sound":
         print ("Opening sound...")
@@ -138,7 +144,7 @@ while sysCommand != "exit":
         sysCommand = input("Type a command: ")
     if sysCommand == "exit":
         print ("Exiting...")
-        sysCommand = input("Type a command: ")
+        import artemisText
     if sysCommand != "exit" and sysCommand != "help":
-        print ("Command not recognized.")
+        print (chalk.red("COMMAND NOT RECOGNIZED"))
         sysCommand = input("Type a command: ")

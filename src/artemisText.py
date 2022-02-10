@@ -209,6 +209,7 @@ while command != "quit":
 
     if command == "prank":
         webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        print(chalk.magenta("GOTCHA ;)"))
         command = input("Command: ")
 
     if command == "system":
