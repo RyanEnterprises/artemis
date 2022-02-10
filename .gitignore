@@ -2,10 +2,4 @@
 ##########       Created by: Microsoft Visual Studio Code            ##########
 ###############################################################################
 
-.vscode/launch-properties.json
-
-src/QnA.py
-
-openAIkey
-
-.env.example
+.vscode/launch.json

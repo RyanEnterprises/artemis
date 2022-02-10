@@ -112,6 +112,7 @@ import urllib.request
 import urllib.parse
 import urllib.error
 import urllib.request
+import chalk
 
 print("Begin by typing a command or saying something.")
 print("TIP: You can always type 'quit' to exit the program.")
@@ -120,22 +121,21 @@ command = input("Command: ")
 
 # Begin the main loop
 while command != "quit":
-    if command == "":
-        print("You cannot say nothing.")
+    if command == "" or command == " ":
+        print(chalk.red("You cannot say nothing."))
         command = input("Command: ")
 
-    if command == "Hello":
+    if command == "hello":
         print(random.choice(gretings))
         command = input("Command: ")
 
     if command == "help":
         print("Here is a list of commands:")
-        print("'QnA' - Ask a question and get an answer.")
         print("'artemis' - Gives you the current version number.")
         print("'fact' - Gives you a random fact")
         print("'flip' - flips a coin")
         print("'game' - Starts a game")
-        print("'Hello' - Say hello to me.")
+        print("'hello' - Say hello to me.")
         print("'help' - Shows a list of avalible commands")
         print("'know' - Gives a summary from wikipedia about a topic")
         print("'loop' - sends your device into an infinite loop")
