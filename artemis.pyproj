@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2b89e676-fb56-4238-b25c-a5b31dbb0ae3}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>src\artemis.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.10</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\speech_recognition\pocketsphinx-data\en-US\LICENSE.txt" />
+    <Content Include="images\ArtemisLockupBlackstd.svg" />
+    <Content Include="images\ArtemisLockupWhite.svg" />
+    <Content Include="images\IconBlack.svg" />
+    <Content Include="images\IconWhite-svg.ico" />
+    <Content Include="images\IconWhite.svg" />
+    <Content Include="scripts\post-install.txt" />
+    <Content Include="scripts\pre-install.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\artemis.py" />
+    <Compile Include="src\artemisText.py" />
+    <Compile Include="src\artemisVoice.py" />
+    <Compile Include="src\know.py" />
+    <Compile Include="src\system.py" />
+    <Compile Include="src\triviagame.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="bin\speech_recognition\" />
+    <Folder Include="bin\speech_recognition\pocketsphinx-data\" />
+    <Folder Include="bin\speech_recognition\pocketsphinx-data\en-US" />
+    <Folder Include="images" />
+    <Folder Include="scripts" />
+    <Folder Include="src" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.10" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
