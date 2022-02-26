@@ -3,24 +3,32 @@
 print("Welcome to Artemis, your personal AI assistant.")
 print("Please wait while I load my knowledge base.")
 
+import random
 
+greetings = [
+    "What's up?",
+    "Hello",
+    "Nice to meet you",
+    "How is your day going?",
+    "Lovely to meet you",
+    "Sup",
+    "Hi"
+]
 
 print("Let's begin by getting to know you a bit")
 
 username = input("What is your name? ")
 print("Hello " + username + "!")
 print("Is this what you want me to call you?")
-answerToNameQuestion = input("y/n")
+answerToNameQuestion = input("y/n ")
 if answerToNameQuestion == "y":
     print("PERFECT! Let's continue, " + username)
+    print(random.choice(greetings) + ", " + username)
 elif answerToNameQuestion == "n":
     username = input("What should I call you? ")
-    print()
-
-
-
-
-
+    print(random.choice(greetings) + ", " + username)
+else:
+    print("Sorry. That is not a valid response. Please type 'n' for no, and 'y' for yes")
 
 print("Type 'voice' to use your voice. TIP: Only use this if you have the PyAudio module installed.")
 print("Type 'text' to type your input.")

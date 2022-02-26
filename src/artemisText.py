@@ -102,6 +102,7 @@ import os
 import time
 import random
 from bs4 import BeautifulSoup
+from artemis import username
 import speech_recognition as sr
 import wikipedia
 import webbrowser
@@ -126,7 +127,7 @@ while command != "quit":
         command = input("Command: ")
 
     if command == "hello":
-        print(random.choice(gretings))
+        print(random.choice(gretings) + ", " + username)
         command = input("Command: ")
 
     if command == "help":
