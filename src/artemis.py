@@ -3,7 +3,25 @@
 print("Welcome to Artemis, your personal AI assistant.")
 print("Please wait while I load my knowledge base.")
 
-print("Let's begin by selecting your input method.")
+
+
+print("Let's begin by getting to know you a bit")
+
+username = input("What is your name? ")
+print("Hello " + username + "!")
+print("Is this what you want me to call you?")
+answerToNameQuestion = input("y/n")
+if answerToNameQuestion == "y":
+    print("PERFECT! Let's continue, " + username)
+elif answerToNameQuestion == "n":
+    username = input("What should I call you? ")
+    print()
+
+
+
+
+
+
 print("Type 'voice' to use your voice. TIP: Only use this if you have the PyAudio module installed.")
 print("Type 'text' to type your input.")
 
