@@ -4,9 +4,9 @@
 
 ## Scripts
 
-scripts\pre-install.txt
+scripts/pre-install.txt
 
-scripts\pre-install.txt
+scripts/pre-install.txt
 
 # VS Workspace Configuration
 .vs/
