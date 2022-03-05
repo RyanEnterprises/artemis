@@ -1,6 +1,10 @@
 #variables
 
-versionNumber = "2.0.0"
+def version():
+    versionNumber = "2.5.0"
+    return versionNumber
+
+versionNumber = version
 
 facts = [
     "I was created by a programmer named Ryan.",
