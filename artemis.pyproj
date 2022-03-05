@@ -42,6 +42,7 @@
     <Folder Include="bin\speech_recognition\pocketsphinx-data\" />
     <Folder Include="bin\speech_recognition\pocketsphinx-data\en-US" />
     <Folder Include="images" />
+    <Folder Include="tests\" />
     <Folder Include="scripts" />
     <Folder Include="src" />
   </ItemGroup>
