@@ -37,6 +37,14 @@ if artemisUGName == "" or aretemisUGName == " ":
     artemisUGName = "artemis"
 print("Are you sure you want to call me " + artemisUGName + "?")
 answerToArtemisRename = input("y/n ")
+if answerToArtemisRename == "y":
+    print("COOL. Hi, my name is " + artemisUGName)
+elif artemisUGName == "n":
+    artemisUGName = input("What do you want to call me? Leave blank if you want artemis. ")
+    if artemisUGName == "" or aretemisUGName == " ":
+        artemisUGName = "artemis"
+else:
+    print("ERR: NO VALID NAME PROVIDED!!")
 
 
 print("Type 'voice' to use your voice. TIP: Only use this if you have the PyAudio module installed.")
