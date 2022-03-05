@@ -33,7 +33,7 @@ else:
 
 print("The next step is to name me! The default name is artemis, but you can call me whatever you want.")
 artemisUGName = input("What do you want to call me? Leave blank if you want artemis. ")
-if artemisUGName == "" or aretemisUGName == " ":
+if artemisUGName == "" or artemisUGName == " ":
     artemisUGName = "artemis"
 print("Are you sure you want to call me " + artemisUGName + "?")
 answerToArtemisRename = input("y/n ")
