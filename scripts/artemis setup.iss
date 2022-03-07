@@ -2,15 +2,15 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Artemis"
-#define MyAppVersion "2.0.0"
+#define MyAppVersion "3.0.0"
 #define MyAppPublisher "Ryan Enterprises"
 #define MyAppURL "https://github.com/RyanEnterprises/artemis"
-#define MyAppExeName "artemis.exe"
+#define MyAppExeName "Artemis.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{014FA007-D7C2-4F1E-AB2F-E87A223D6D66}
+AppId={{03ECB2CA-98E3-4CD0-8C76-B236E43278A5}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -18,7 +18,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={autopf}\{#MyAppName}
+DefaultDirName={autopf}\artemis
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 LicenseFile=C:\Users\rpmul\Documents\artemis\LICENSE
@@ -28,7 +28,7 @@ InfoAfterFile=C:\Users\rpmul\Documents\artemis\scripts\post-install.txt
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=C:\Users\rpmul\Documents\artemis\scripts
-OutputBaseFilename=artemisSetup
+OutputBaseFilename=artemis setup
 SetupIconFile=C:\Users\rpmul\Documents\artemis\images\IconWhite-svg.ico
 Compression=lzma
 SolidCompression=yes
@@ -97,8 +97,11 @@ Source: "C:\Users\rpmul\Documents\artemis\bin\api-ms-win-crt-stdio-l1-1-0.dll"; 
 Source: "C:\Users\rpmul\Documents\artemis\bin\api-ms-win-crt-string-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\api-ms-win-crt-time-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\api-ms-win-crt-utility-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rpmul\Documents\artemis\bin\artemis.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\Artemis.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\artemisText.py"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\artemisVoice.py"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\base_library.zip"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\know.py"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\libcrypto-1_1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\libffi-7.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\libssl-1_1.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -116,6 +119,8 @@ Source: "C:\Users\rpmul\Documents\artemis\bin\Qt6Gui.dll"; DestDir: "{app}"; Fla
 Source: "C:\Users\rpmul\Documents\artemis\bin\Qt6Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\Qt6Widgets.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\select.pyd"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\system.py"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\Documents\artemis\bin\triviagame.py"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\ucrtbase.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\unicodedata.pyd"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\Documents\artemis\bin\VCRUNTIME140.dll"; DestDir: "{app}"; Flags: ignoreversion

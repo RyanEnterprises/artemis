@@ -30,6 +30,23 @@ elif answerToNameQuestion == "n":
 else:
     print("Sorry. That is not a valid response. Please type 'n' for no, and 'y' for yes")
 
+
+print("The next step is to name me! The default name is artemis, but you can call me whatever you want.")
+artemisUGName = input("What do you want to call me? Leave blank if you want artemis. ")
+if artemisUGName == "" or artemisUGName == " ":
+    artemisUGName = "artemis"
+print("Are you sure you want to call me " + artemisUGName + "?")
+answerToArtemisRename = input("y/n ")
+if answerToArtemisRename == "y":
+    print("COOL. Hi, my name is " + artemisUGName)
+elif artemisUGName == "n":
+    artemisUGName = input("What do you want to call me? Leave blank if you want artemis. ")
+    if artemisUGName == "" or aretemisUGName == " ":
+        artemisUGName = "artemis"
+else:
+    print("ERR: NO VALID NAME PROVIDED!!")
+
+
 print("Type 'voice' to use your voice. TIP: Only use this if you have the PyAudio module installed.")
 print("Type 'text' to type your input.")
 

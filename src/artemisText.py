@@ -1,10 +1,6 @@
 #variables
 
-def version():
-    versionNumber = "2.5.0"
-    return versionNumber
-
-versionNumber = version
+versionNumber = "3.0.0"
 
 facts = [
     "I was created by a programmer named Ryan.",
@@ -107,6 +103,7 @@ import time
 import random
 from bs4 import BeautifulSoup
 from artemis import username as un
+from artemis import artemisUGName as AUGN
 import speech_recognition as sr
 import wikipedia
 import webbrowser
@@ -132,6 +129,7 @@ while command != "quit":
 
     if command == "hello":
         print(random.choice(gretings) + ", " + un)
+        print("My name is " + AUGN + ", how can I help you today?")
         command = input("Command: ")
 
     if command == "help":
