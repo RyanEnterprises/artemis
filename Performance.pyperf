@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectTarget>
+    <TargetProject>2b89e676-fb56-4238-b25c-a5b31dbb0ae3</TargetProject>
+    <FriendlyName>artemis</FriendlyName>
+  </ProjectTarget>
+  <Reports />
+  <UseVTune>false</UseVTune>
+</ProfilingTarget>
