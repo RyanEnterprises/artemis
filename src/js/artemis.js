@@ -9,7 +9,7 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'hello') {
-        alert(hellos);
+        alert(Math.floor(Math.floor(Math.random() * (hellos.length - 0.01))));
     }
 });
 // Arrays

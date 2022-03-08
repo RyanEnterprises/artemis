@@ -10,21 +10,6 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'hello') {
-        alert(hellos);
+        alert("HELLO");
     }
 });
-
-
-
-// Arrays
-
-const hellos = [
-    'Hello',
-    'Bonjour',
-    'Hola',
-    'Hallo',
-    'Ciao',
-    'Salut',
-    'Guten Tag',
-    'Namaste',
-]
