@@ -1,8 +1,8 @@
 {
   "name": "artemis",
   "productName": "artemis",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "4.0.0",
+  "description": "an AI that adapts to you.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -16,7 +16,7 @@
     "name": "hiteacheryouare",
     "email": "82683251+hiteacheryouare@users.noreply.github.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "config": {
     "forge": {
       "packagerConfig": {},
