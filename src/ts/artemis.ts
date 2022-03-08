@@ -1,5 +1,6 @@
-var input = document.getElementById('input box');
-var submit = document.getElementById('submit button');
+const input = document.getElementById('input box');
+const submit = document.getElementById('submit button');
+const output = document.getElementById('response');
 
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', function () {
@@ -10,6 +11,16 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'hello') {
-        alert("HELLO");
+        output.innerHTML = 'Hello!';
     }
+    else if (text.toLowerCase() === 'hi') {
+        alert("Hello");
+    }
+    else if (text.toLowerCase() === 'goodbye') {
+        alert("GOODBYE");
+    }
+    else if (text.toLowerCase() === 'help') {
+        
+    }
+
 });

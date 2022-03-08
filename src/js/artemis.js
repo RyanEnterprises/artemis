@@ -1,5 +1,6 @@
 var input = document.getElementById('input box');
 var submit = document.getElementById('submit button');
+var output = document.getElementById('response');
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', function () {
     // get the text from the input box
@@ -9,17 +10,14 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'hello') {
-        alert(Math.floor(Math.floor(Math.random() * (hellos.length - 0.01))));
+        output.innerHTML = 'Hello!';
+    }
+    else if (text.toLowerCase() === 'hi') {
+        alert("Hello");
+    }
+    else if (text.toLowerCase() === 'goodbye') {
+        alert("GOODBYE");
+    }
+    else if (text.toLowerCase() === 'help') {
     }
 });
-// Arrays
-var hellos = [
-    'Hello',
-    'Bonjour',
-    'Hola',
-    'Hallo',
-    'Ciao',
-    'Salut',
-    'Guten Tag',
-    'Namaste',
-];
