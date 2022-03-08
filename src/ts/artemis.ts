@@ -9,11 +9,9 @@ submit.addEventListener('click', function () {
     input.value = '';
     // run the function
     console.log(text);
-    if (text != ' ') {
-        if (text.toLowerCase() == 'hello') {
-            console.log(Math.floor(Math.random() * hellos.length));
-        }
-    };
+    if (text.toLowerCase() === 'hello') {
+        alert(hellos);
+    }
 });
 
 
