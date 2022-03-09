@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
+const os = require('os');
+const { shell } = require('electron');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -41,7 +43,26 @@ app.on('activate', () => {
   }
 });
 
+
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
 
+//const fileManagerButton = document.getElementById('fileManagerButton');
+//fileManagerButton.addEventListener('click', () => {
+  //shell.openItem(os.homedir());
+//});
 
+//const notification = {
+  //title: 'Hello',
+  //body: 'This is a notification',
+//};
+
+//const notificationButton = document.getElementById('notificationButton');
+
+//notificationButton.addEventListener('click', () => {
+  //new Notification(notification.title, notification);
+  //notification.onclick = () => {
+    //console.log('Notification clicked');
+  //}
+//});
