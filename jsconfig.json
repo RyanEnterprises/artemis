@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "jsx": "preserve",
+        "strictFunctionTypes": true,
+        "watch": true,
+        "outDir": "src/js/"
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
