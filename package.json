@@ -7,6 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "build": "npx tsc src/ts/main.ts --outDir src/js && npx tsc src/ts/artemis.ts --outDir src/js",
+    "buildStart": "npx tsc src/ts/main.ts --outDir src/js && npm run start && npx tsc src/ts/artemis.ts --outDir src/js",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
