@@ -1,7 +1,8 @@
-const input = document.getElementById('input box');
-const submit = document.getElementById('submit button');
-const output = document.getElementById('response');
-const versionNumber = 4.0;
+var input = document.getElementById('input box');
+var submit = document.getElementById('submit button');
+var output = document.getElementById('response');
+var header = document.getElementById('header');
+var versionNumber = 4.0;
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', function () {
     // get the text from the input box
@@ -53,7 +54,7 @@ submit.addEventListener('click', function () {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
     }
 });
-const facts = [
+var facts = [
     "I was created by a programmer named Ryan.",
     "I was created in 2022.",
     "The world's oldest wooden wheel has been around for more than 5,000 years",
@@ -75,7 +76,7 @@ const facts = [
     "It takes a drop of water 90 days to travel the entire Mississippi River",
     "Lemons float, but limes sink",
 ];
-const selfDestruct = () => {
+var selfDestruct = function () {
     output.innerHTML = '<p>Self-Destructing...</p>';
     // make the window go crazy, shake around, and then close
     setTimeout(function () {

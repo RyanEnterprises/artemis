@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "jsx": "preserve",
-        "target": "es2019",
+        // "target": "es2019",
         "strictFunctionTypes": true,
         "watch": true,
         "outDir": "src/js/"
