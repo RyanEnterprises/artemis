@@ -1,8 +1,8 @@
-var input = document.getElementById('input box');
-var submit = document.getElementById('submit button');
-// have the user type something in the box, and then when submit is clicked, trigger a function
-input.addEventListener('keyup', function (event) {
+"use strict";
+exports.__esModule = true;
+var artemis_1 = require("./artemis");
+artemis_1.input.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
-        submit.click();
+        artemis_1.submit.click();
     }
 });
