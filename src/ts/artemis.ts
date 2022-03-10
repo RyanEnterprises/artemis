@@ -9,11 +9,6 @@ const submit: Input = document.getElementById('submit button');
 const output: Paragraph = document.getElementById('response');
 const header: Heading = document.getElementById('header');
 const versionNumber: float = 4.0;
-export { input, submit, output, header, versionNumber };
-
-
-import { numbers, jokes, facts, greetings } from './arrays';
-import { selfDestruct } from './selfDestruct';
 
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', (): void => {

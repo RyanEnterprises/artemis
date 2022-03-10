@@ -1,18 +1,8 @@
-"use strict";
-exports.__esModule = true;
-exports.versionNumber = exports.header = exports.output = exports.submit = exports.input = void 0;
 var input = document.getElementById('input box');
-exports.input = input;
 var submit = document.getElementById('submit button');
-exports.submit = submit;
 var output = document.getElementById('response');
-exports.output = output;
 var header = document.getElementById('header');
-exports.header = header;
 var versionNumber = 4.0;
-exports.versionNumber = versionNumber;
-var arrays_1 = require("./arrays");
-var selfDestruct_1 = require("./selfDestruct");
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', function () {
     // get the text from the input box
@@ -37,7 +27,7 @@ submit.addEventListener('click', function () {
         }, 4000);
     }
     else if (text.toLowerCase() === 'fact') {
-        output.innerHTML = '<p>' + arrays_1.facts[Math.floor(Math.random() * arrays_1.facts.length)] + '</p>';
+        output.innerHTML = '<p>' + facts[Math.floor(Math.random() * facts.length)] + '</p>';
     }
     else if (text.toLowerCase() === 'github') {
         output.innerHTML = '<p>Github: <a href="https://github.com/RyanEnterprises/artemis">Link</a></p>';
@@ -55,13 +45,13 @@ submit.addEventListener('click', function () {
         output.innerHTML = "Hello";
     }
     else if (text.toLowerCase() === 'joke') {
-        output.innerHTML = '<p>' + arrays_1.jokes[Math.floor(Math.random() * arrays_1.jokes.length)] + '</p>';
+        output.innerHTML = '<p>' + jokes[Math.floor(Math.random() * jokes.length)] + '</p>';
     }
     else if (text.toLowerCase() === 'license') {
         output.innerHTML = '<p> Licensed under the Apache License, Version 2.0 (the "License") <br> you may not use this file except in compliance with the License. <br> You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache.org</a> <br> Unless required by applicable law or agreed to in writing, software <br> distributed under the License is distributed on an "AS IS" BASIS, <br> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br> See the License for the specific language governing permissions and <br> limitations under the License. </p>';
     }
     else if (text.toLowerCase() === 'self destruct') {
-        (0, selfDestruct_1.selfDestruct)();
+        selfDestruct();
     }
     else {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
