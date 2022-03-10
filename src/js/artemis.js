@@ -1,7 +1,7 @@
-var input = document.getElementById('input box');
-var submit = document.getElementById('submit button');
-var output = document.getElementById('response');
-var versionNumber = 4.0;
+const input = document.getElementById('input box');
+const submit = document.getElementById('submit button');
+const output = document.getElementById('response');
+const versionNumber = 4.0;
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', function () {
     // get the text from the input box
@@ -25,6 +25,9 @@ submit.addEventListener('click', function () {
             window.close();
         }, 4000);
     }
+    else if (text.toLowerCase() === 'fact') {
+        output.innerHTML = '<p>' + facts[Math.floor(Math.random() * facts.length)] + '</p>';
+    }
     else if (text.toLowerCase() === 'github') {
         output.innerHTML = '<p>Github: <a href="https://github.com/RyanEnterprises/artemis">Link</a></p>';
     }
@@ -35,7 +38,7 @@ submit.addEventListener('click', function () {
         output.innerHTML = 'Hello!';
     }
     else if (text.toLowerCase() === 'help') {
-        output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br>';
+        output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br>';
     }
     else if (text.toLowerCase() === 'hi') {
         output.innerHTML = "Hello";
@@ -50,7 +53,29 @@ submit.addEventListener('click', function () {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
     }
 });
-var selfDestruct = function () {
+const facts = [
+    "I was created by a programmer named Ryan.",
+    "I was created in 2022.",
+    "The world's oldest wooden wheel has been around for more than 5,000 years",
+    "Dead skin cells are a main ingredient in household dust",
+    "Sudan has more pyramids than any country in the world",
+    "The average person walks the equivalent of three times around the world in their lifetime",
+    "The bumblebee bat is the world's smallest mammal",
+    "The circulatory system is more than 60,000 miles long",
+    "There are parts of Africa in all four hemispheres",
+    "The cornea is one of only two parts of the human body without blood vessels",
+    "The world's first animated feature film was made in Argentina",
+    "German chocolate cake was invented in Texas",
+    "The Philippines consists of 7,641 islands",
+    "A one-way trip on the Trans-Siberian Railway involves crossing 3,901 bridges",
+    "There's enough gold inside Earth to coat the planet",
+    "Cleveland was once the country's fifth-largest city",
+    "The brand name Spam is a combination of “spice” and “ham",
+    "The first person to walk on the moon was Buzz Aldrin",
+    "It takes a drop of water 90 days to travel the entire Mississippi River",
+    "Lemons float, but limes sink",
+];
+const selfDestruct = () => {
     output.innerHTML = '<p>Self-Destructing...</p>';
     // make the window go crazy, shake around, and then close
     setTimeout(function () {
