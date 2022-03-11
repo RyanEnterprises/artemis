@@ -33,7 +33,7 @@ coverage
 build/Release
 
 # Dependency directories
-# node_modules/
+node_modules/
 node_modules/electron/dist/electron.exe
 jspm_packages/
 
@@ -88,3 +88,4 @@ typings/
 
 # Electron-Forge
 /out
+node_modules
