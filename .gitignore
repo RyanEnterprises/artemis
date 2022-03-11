@@ -11,3 +11,4 @@ scripts/pre-install.txt
 # VS Workspace Configuration
 .vs/
 
+node_modules
