@@ -18,7 +18,13 @@ submit.addEventListener('click', (): void => {
         input.value = '';
         // run the function
         console.log(text);
-        if (text.toLowerCase() === 'about') {
+        if (text.toLowerCase() === 'advanced help') {
+            output.innerHTML = '<p>Advanced help is not available yet.</p>';
+        }
+        else if (text.toLowerCase() === 'animal') {
+            output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>'
+        }
+        else if (text.toLowerCase() === 'about') {
             output.innerHTML = '<p>Version: ' + versionNumber + '</p>';
         }
         else if (text.toLowerCase() === 'clear') {
@@ -43,13 +49,13 @@ submit.addEventListener('click', (): void => {
             output.innerHTML = 'Goodbye!';
         }
         else if (text.toLowerCase() === 'hello') {
-            output.innerHTML = 'Hello!';
+            output.innerHTML = '<p>' + greetings[Math.floor(Math.random() * greetings.length)] + '</p>';
         }
         else if (text.toLowerCase() === 'help') {
-            output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>Joke</b> - tells you a joke <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br>';
+            output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>Joke</b> - tells you a joke <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br> Unsatisfied? use the "advanced help" command for a full list.';
         }
         else if (text.toLowerCase() === 'hi') {
-            output.innerHTML = "Hello";
+            output.innerHTML = '<p>' + greetings[Math.floor(Math.random() * greetings.length)] + '</p>';
         }
         else if (text.toLowerCase() === 'joke') {
             output.innerHTML = '<p>' + jokes[Math.floor(Math.random() * jokes.length)] + '</p>';
@@ -234,6 +240,7 @@ const animals: string[] = [
     "squirrel",
     "beaver",
     "hamster",
+]
 
 const selfDestruct = () => {
     output.innerHTML = '<p>Self-Destructing...</p>';
@@ -307,4 +314,5 @@ const selfDestruct = () => {
     setTimeout(function () {
         window.close();
     }, 1000);
+    return 1;
 };
