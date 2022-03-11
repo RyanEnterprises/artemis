@@ -1,0 +1,15 @@
+<p>
+
+<b>animal</b> - gives a random animal. <br>
+<b>about</b> - gives information about the program. <br>
+<b>clear</b> - clears the output box. <br>
+<b>contact</b> - gives contact information. <br>
+<b>exit</b> - exits the program. <br>
+<b>fact</b> - gives a random fact. <br>
+<b>github</b> - gives the github link. <br>
+<b>help</b> - gives basic help. <br>
+<b>joke</b> - gives a random joke. <br>
+<b>license</b> - gives the licencing information. <br>
+<b>Self Destruct</b> - You\'ll see
+
+</p>

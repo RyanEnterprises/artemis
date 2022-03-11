@@ -19,7 +19,7 @@ submit.addEventListener('click', (): void => {
         // run the function
         console.log(text);
         if (text.toLowerCase() === 'advanced help') {
-            output.innerHTML = '<p>Advanced help is not available yet.</p>';
+            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see </p>'
         }
         else if (text.toLowerCase() === 'animal') {
             output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>'
@@ -73,8 +73,6 @@ submit.addEventListener('click', (): void => {
 
 
     });
-
-
 
 const facts: string[] = [
     "I was created by a programmer named Ryan.",
@@ -240,55 +238,100 @@ const animals: string[] = [
     "squirrel",
     "beaver",
     "hamster",
-]
+];
 
 const selfDestruct = () => {
     output.innerHTML = '<p>Self-Destructing...</p>';
     // make the window go crazy, shake around, and then close
     setTimeout(function () {
         window.moveBy(10, 0);
+        header.style.color = colors[Math.floor(Math.random() * colors.length)];
         setTimeout(function () {
             window.moveBy(-20, 0);
+            header.style.color = colors[Math.floor(Math.random() * colors.length)];
             setTimeout(function () {
                 window.moveBy(0, 10);
+                header.style.color = colors[Math.floor(Math.random() * colors.length)];
                 setTimeout(function () {
                     window.moveBy(0, -20);
+                    header.style.color = colors[Math.floor(Math.random() * colors.length)];
                     setTimeout(function () {
                         window.moveBy(0, 10);
+                        header.style.color = colors[Math.floor(Math.random() * colors.length)];
                         setTimeout(function () {
                             window.moveBy(0, -20);
+                            header.style.color = colors[Math.floor(Math.random() * colors.length)];
                             setTimeout(function () {
                                 window.moveBy(0, 10);
+                                header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                 setTimeout(function () {
                                     window.moveBy(0, -20);
+                                    header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                     setTimeout(function () {
                                         window.moveBy(0, 10);
+                                        header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                         setTimeout(function () {
                                             window.moveBy(0, -20);
+                                            header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                             setTimeout(function () {
                                                 window.moveBy(0, 10);
+                                                header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                 setTimeout(function () {
-                                                    window.moveBy(0, -200);
+                                                    window.moveBy(0, -20);
+                                                    header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                     setTimeout(function () {
                                                         window.moveBy(0, 10);
+                                                        header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                         setTimeout(function () {
                                                             window.moveBy(0, -20);
+                                                            header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                             setTimeout(function () {
-                                                                window.moveBy(0, 100);
+                                                                window.moveBy(0, 10);
+                                                                header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                                 setTimeout(function () {
                                                                     window.moveBy(0, -20);
+                                                                    header.style.color = colors[Math.floor(Math.random() * colors.length)];
                                                                     setTimeout(function () {
                                                                         window.moveBy(0, 10);
                                                                         setTimeout(function () {
                                                                             window.moveBy(0, -20);
                                                                             setTimeout(function () {
-                                                                                window.moveBy(0, 100);
+                                                                                window.moveBy(0, 10);
                                                                                 setTimeout(function () {
                                                                                     window.moveBy(0, -20);
                                                                                     setTimeout(function () {
                                                                                         window.moveBy(0, 10);
                                                                                         setTimeout(function () {
-                                                                                            window.moveBy(0, -20);
+                                                                                            window.moveBy(0, -200);
+                                                                                            setTimeout(function () {
+                                                                                                window.moveBy(0, 10);
+                                                                                                setTimeout(function () {
+                                                                                                window.moveBy(0, -20);
+                                                                                                setTimeout(function () {
+                                                                                                    window.moveBy(0, 100);
+                                                                                                    setTimeout(function () {
+                                                                                                        window.moveBy(0, -20);
+                                                                                                        setTimeout(function () {
+                                                                                                            window.moveBy(0, 10);
+                                                                                                            setTimeout(function () {
+                                                                                                                window.moveBy(0, -20);
+                                                                                                                setTimeout(function () {
+                                                                                                                    window.moveBy(0, 100);
+                                                                                                                    setTimeout(function () {
+                                                                                                                        window.moveBy(0, -20);
+                                                                                                                        setTimeout(function () {
+                                                                                                                            window.moveBy(0, 10);
+                                                                                                                            setTimeout(function () {
+                                                                                                                                window.moveBy(0, -20);
+                                                                                                                            }, 100);
+                                                                                                                        }, 100);
+                                                                                                                    }, 100);
+                                                                                                                }, 100);
+                                                                                                            }, 100);
+                                                                                                        }, 100);
+                                                                                                    }, 100);
+                                                                                                }, 100);
+                                                                                            }, 100);
                                                                                         }, 100);
                                                                                     }, 100);
                                                                                 }, 100);
