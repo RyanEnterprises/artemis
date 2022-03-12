@@ -19,7 +19,7 @@ submit.addEventListener('click', (): void => {
         // run the function
         console.log(text);
         if (text.toLowerCase() === 'advanced help') {
-            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see </p>'
+            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system </p>'
         }
         else if (text.toLowerCase() === 'animal') {
             output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>'
@@ -32,6 +32,9 @@ submit.addEventListener('click', (): void => {
         }
         else if (text.toLowerCase() === 'contact') {
             output.innerHTML = '<p>Email: <a href="mailto:rpmullin@comcast.net">link</a></p>';
+        }
+        else if (text.toLowerCase() === 'coin') {
+            output.innerHTML = '<p>' + coin[Math.floor(Math.random() * coin.length)] + '</p>';
         }
         else if (text.toLowerCase() === 'exit') {
             output.innerHTML = '<p>Exiting...</p>';
@@ -63,8 +66,52 @@ submit.addEventListener('click', (): void => {
         else if (text.toLowerCase() === 'license') {
             output.innerHTML = '<p> Licensed under the Apache License, Version 2.0 (the "License") <br> you may not use this file except in compliance with the License. <br> You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache.org</a> <br> Unless required by applicable law or agreed to in writing, software <br> distributed under the License is distributed on an "AS IS" BASIS, <br> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br> See the License for the specific language governing permissions and <br> limitations under the License. </p>';
         }
+        else if (text.toLowerCase() === 'open') {
+            output.innerHTML = '<p>Type the URL of the website you want to open</p>';
+            input.value = '';
+            submit.addEventListener('click', (): void => {
+                var url = input.value;
+                input.value = '';
+            });
+        }
         else if (text.toLowerCase() === 'self destruct') {
             selfDestruct();
+        }
+        else if (text.toLowerCase() === 'system') {
+            setTimeout(function () {
+                output.innerHTML = '<p>Entering system mode...</p>'
+            }, 2000);
+            setTimeout(function () {
+                output.innerHTML = '<p>System mode activated!</p>'
+            }, 4000);
+            setTimeout(function () {
+                output.innerHTML = '<p>Type the command you want to run</p>'
+            }
+            , 6000);
+            input.value = '';
+            submit.addEventListener('click', (): void => {
+                // get the text from the input box
+                var text = input.value;
+                // clear the input box
+                input.value = '';
+                // run the function
+                console.log(text);
+                if (text.toLowerCase() === 'clear') {
+                    output.innerHTML = ' ';
+                }
+                else if (text.toLowerCase() === 'exit') {
+                    output.innerHTML = '<p>Exiting...</p>';
+                    setTimeout(function () {
+                        window.close();
+                    }, 4000);
+                }
+                else if (text.toLowerCase() === 'help') {
+                    output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>Joke</b> - tells you a joke <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br> Unsatisfied? use the "advanced help" command for a full list.';
+                }
+                else {
+                    output.innerHTML = '<p>Invalid command</p>';
+                }
+            });
         }
         else {
             output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
