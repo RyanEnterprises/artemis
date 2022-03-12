@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\ts"
   ],
-  "SelectedNode": "\\src\\artemisText.py",
+  "SelectedNode": "\\src\\ts\\artemis.ts",
   "PreviewInSolutionExplorer": false
 }
