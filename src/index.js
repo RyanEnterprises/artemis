@@ -184,7 +184,7 @@ const menu = Menu.buildFromTemplate([
         label: 'About Artemis',
         click: () => {
           openAboutWindow({
-            icon_path: path.join(__dirname, 'images/FullColorIcon.png'),
+            icon_path: path.join(__dirname, 'images/ArtemisLockupFullColor.svg'),
             copyright: 'Copyright © 2022 Ryan Enterprises',
             package_json_dir: __dirname,
             use_version_info: [
@@ -197,8 +197,11 @@ const menu = Menu.buildFromTemplate([
         }
       }
     ]
-  }
+  },
 ]);
+
+app.applicationMenu = menu;
+
 
 
 

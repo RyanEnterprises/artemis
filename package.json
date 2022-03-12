@@ -1,7 +1,7 @@
 {
   "name": "artemis",
   "productName": "artemis",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "an AI that adapts to you",
   "main": "src/index.js",
   "scripts": {
