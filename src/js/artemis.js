@@ -12,7 +12,7 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'advanced help') {
-        output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system </p>';
+        output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br></p>';
     }
     else if (text.toLowerCase() === 'animal') {
         output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>';
@@ -64,24 +64,37 @@ submit.addEventListener('click', function () {
         input.value = '';
         submit.addEventListener('click', function () {
             var url = input.value;
-            input.value = '';
+            // open the url in the default browser
+            shell.openExternal(url);
         });
+        input.value = '';
+    }
+    else if (text.toLowerCase() === 'search') {
+        output.innerHTML = '<p>Type the search query</p>';
+        input.value = '';
+        submit.addEventListener('click', function () {
+            var query = input.value;
+            // open the url in the default browser
+            shell.openExternal('https://www.google.com/search?q=' + query);
+        });
+        input.value = '';
     }
     else if (text.toLowerCase() === 'self destruct') {
         selfDestruct();
     }
-    else if (text.toLowerCase() === 'system') {
+    /* else if (text.toLowerCase() === 'system') {
         setTimeout(function () {
-            output.innerHTML = '<p>Entering system mode...</p>';
+            output.innerHTML = '<p>Entering system mode...</p>'
         }, 2000);
         setTimeout(function () {
-            output.innerHTML = '<p>System mode activated!</p>';
+            output.innerHTML = '<p>System mode activated!</p>'
         }, 4000);
         setTimeout(function () {
-            output.innerHTML = '<p>Type the command you want to run</p>';
-        }, 6000);
+            output.innerHTML = '<p>Type the command you want to run</p>'
+        }
+        , 6000);
         input.value = '';
-        submit.addEventListener('click', function () {
+        submit.addEventListener('click', (): void => {
             // get the text from the input box
             var text = input.value;
             // clear the input box
@@ -104,7 +117,7 @@ submit.addEventListener('click', function () {
                 output.innerHTML = '<p>Invalid command</p>';
             }
         });
-    }
+    }, 500); */
     else {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
     }

@@ -1,3 +1,5 @@
+
+
 type float = number;
 type DOOBLEGOGGLE = Float32Array;
 type Input = HTMLInputElement;
@@ -71,13 +73,25 @@ submit.addEventListener('click', (): void => {
             input.value = '';
             submit.addEventListener('click', (): void => {
                 var url = input.value;
-                input.value = '';
+                // open the url in the default browser
+                shell.openExternal(url);
             });
+                input.value = '';
+        }
+        else if (text.toLowerCase() === 'search') {
+            output.innerHTML = '<p>Type the search query</p>';
+            input.value = '';
+            submit.addEventListener('click', (): void => {
+                let query = input.value;
+                // open the url in the default browser
+                shell.openExternal('https://www.google.com/search?q=' + query);
+            });
+                input.value = '';
         }
         else if (text.toLowerCase() === 'self destruct') {
             selfDestruct();
         }
-        else if (text.toLowerCase() === 'system') {
+        /* else if (text.toLowerCase() === 'system') {
             setTimeout(function () {
                 output.innerHTML = '<p>Entering system mode...</p>'
             }, 2000);
@@ -112,7 +126,8 @@ submit.addEventListener('click', (): void => {
                     output.innerHTML = '<p>Invalid command</p>';
                 }
             });
-        }
+        }, 500); */
+        
         else {
             output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
         }
