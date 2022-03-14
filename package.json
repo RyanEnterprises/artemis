@@ -37,7 +37,10 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "maintainer": "Ryan Enterprises",
+            "homepage": "https://github.com/RyanEnterprises/artemis"
+          }
         },
         {
           "name": "@electron-forge/maker-rpm",
