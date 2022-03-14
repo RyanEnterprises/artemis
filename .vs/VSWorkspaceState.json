@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\ts"
+    ""
   ],
-  "SelectedNode": "\\src\\ts\\artemis.ts",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
