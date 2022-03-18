@@ -168,6 +168,13 @@ const menu = Menu.buildFromTemplate([
         click: () => {
           BrowserWindow.getFocusedWindow().close();
         }
+      },
+      {
+        label: 'Prank',
+        accelerator: 'CmdOrCtrl+R',
+        click: () => {
+          shell.openExternal('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        }
       }
     ]
   },
@@ -236,5 +243,3 @@ app.applicationMenu = menu;
     //console.log('Notification clicked');
   //}
 //});
-
-
