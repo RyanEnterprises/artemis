@@ -10,8 +10,7 @@
     "buildStart": "npx tsc src/ts/main.ts --outDir src/js && npm run start && npx tsc src/ts/artemis.ts --outDir src/js",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "publish": "electron-forge publish"
   },
   "keywords": [],
   "author": {
