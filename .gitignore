@@ -9,3 +9,5 @@ src/QnA.py
 openAIkey
 
 .env.example
+
+node_modules/
