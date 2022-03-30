@@ -1,14 +1,13 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "jsx": "preserve",
-        // "target": "es2019",
-        "strictFunctionTypes": true,
-        "watch": true,
+        "target": "es6",
         "outDir": "src/js/"
     },
     "exclude": [
         "node_modules",
         "**/node_modules/*"
+    ],
+    "files": [
+        "src/ts/*.ts"
     ]
 }

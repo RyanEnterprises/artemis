@@ -4,6 +4,8 @@ type Input = HTMLInputElement;
 type Paragraph = HTMLParagraphElement;
 type Heading = HTMLHeadingElement;
 
+const { shell } = require('electron');
+
 const input: Input = document.getElementById('input box');
 const submit: Input = document.getElementById('submit button');
 const output: Paragraph = document.getElementById('response');
