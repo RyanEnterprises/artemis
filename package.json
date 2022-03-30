@@ -36,7 +36,10 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "maintainer": "Ryan Enterprises",
+            "homepage": "https://github.com/RyanEnterprises/artemis"
+          }
         },
         {
           "name": "@electron-forge/maker-rpm",
@@ -58,6 +61,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "17.1.2"
+    "electron": "18.0.0"
   }
 }
