@@ -4,13 +4,24 @@ type Input = HTMLInputElement;
 type Paragraph = HTMLParagraphElement;
 type Heading = HTMLHeadingElement;
 
-const { shell } = require('electron');
-
 const input: Input = document.getElementById('input box');
 const submit: Input = document.getElementById('submit button');
 const output: Paragraph = document.getElementById('response');
 const header: Heading = document.getElementById('header');
-const versionNumber: float = 4.0;
+const versionNumber: float = 5.0;
+
+
+let callDeepAI = () => {
+    const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
+    deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
+    (async function() {
+        var resp = await deepai.callStandardApi("text-generator", {
+                text: "What is your name?",
+        });
+        output.innerHTML = resp
+    })()
+
+}
 
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', (): void => {
@@ -21,7 +32,7 @@ submit.addEventListener('click', (): void => {
         // run the function
         console.log(text);
         if (text.toLowerCase() === 'advanced help') {
-            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br> <b>URL</b> - opens a URL in your default browser</p>'
+            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br>'
         }
         else if (text.toLowerCase() === 'animal') {
             output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>'
@@ -91,16 +102,19 @@ submit.addEventListener('click', (): void => {
         else if (text.toLowerCase() === 'self destruct') {
             selfDestruct();
         }
-        else if (text.toLowerCase() === 'url') {
-            output.innerHTML = '<p>Type the URL of the website you want to open</p>';
-            input.value = '';
-            submit.addEventListener('click', (): void => {
-                var url = input.value;
-                // open the url in the default browser
-                shell.openExternal(url);
-            });
-                input.value = '';
-        }  
+        // else if (text.toLowerCase() === 'url') {
+        //     output.innerHTML = '<p>Type the URL of the website you want to open</p>';
+        //     input.value = '';
+        //     submit.addEventListener('click', (): void => {
+        //         var url = input.value;
+        //         // open the url in the default browser
+        //         shell.openExternal(url);
+        //     });
+        //         input.value = '';
+        // }
+        else if (text.toLowerCase() === 'write') {
+            callDeepAI();
+        }
         else {
             output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
         }

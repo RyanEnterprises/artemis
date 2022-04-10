@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es2019",
         "outDir": "src/js/"
     },
     "exclude": [
@@ -8,6 +8,7 @@
         "**/node_modules/*"
     ],
     "files": [
-        "src/ts/*.ts"
+        "src/ts/artemis.ts",
+        "src/ts/main.ts",
     ]
 }

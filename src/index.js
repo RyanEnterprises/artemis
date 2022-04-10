@@ -193,13 +193,12 @@ const menu = Menu.buildFromTemplate([
           openAboutWindow({
             icon_path: path.join(__dirname, 'images/ArtemisLockupFullColor.svg'),
             copyright: 'Copyright © 2022 Ryan Enterprises',
-            package_json_dir: __dirname,
+            package_json_dir: path.join(__dirname, '../package.json'),
             use_version_info: [
               ['Artemis', '5.0.0'],
               ['node.js', '17.6.0'],
-              ['electron', '7.1.6'],
-              ['v8', '7.6.0'],
-              ['chromium', '75.0.3770.90'],
+              ['electron', '18.0.1'],
+              ['chromium', '100.0.4896.60'],
             ],})
         }
       }

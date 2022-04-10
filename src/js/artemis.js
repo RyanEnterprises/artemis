@@ -1,10 +1,20 @@
-var input = document.getElementById('input box');
-var submit = document.getElementById('submit button');
-var output = document.getElementById('response');
-var header = document.getElementById('header');
-var versionNumber = 4.0;
+const input = document.getElementById('input box');
+const submit = document.getElementById('submit button');
+const output = document.getElementById('response');
+const header = document.getElementById('header');
+const versionNumber = 5.0;
+let callDeepAI = () => {
+    const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
+    deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
+    (async function () {
+        var resp = await deepai.callStandardApi("text-generator", {
+            text: "What is your name?",
+        });
+        output.innerHTML = resp;
+    })();
+};
 // when submit is clicked, take the text and run a function
-submit.addEventListener('click', function () {
+submit.addEventListener('click', () => {
     // get the text from the input box
     var text = input.value;
     // clear the input box
@@ -12,7 +22,7 @@ submit.addEventListener('click', function () {
     // run the function
     console.log(text);
     if (text.toLowerCase() === 'advanced help') {
-        output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br> <b>URL</b> - opens a URL in your default browser</p>';
+        output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br>';
     }
     else if (text.toLowerCase() === 'animal') {
         output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>';
@@ -62,7 +72,7 @@ submit.addEventListener('click', function () {
     else if (text.toLowerCase() === 'open') {
         output.innerHTML = '<p>Type the URL of the website you want to open</p>';
         input.value = '';
-        submit.addEventListener('click', function () {
+        submit.addEventListener('click', () => {
             var url = input.value;
             // open the url in the default browser
             shell.openExternal(url);
@@ -72,8 +82,8 @@ submit.addEventListener('click', function () {
     else if (text.toLowerCase() === 'search') {
         output.innerHTML = '<p>Type the search query</p>';
         input.value = '';
-        submit.addEventListener('click', function () {
-            var query = input.value;
+        submit.addEventListener('click', () => {
+            let query = input.value;
             // open the url in the default browser
             shell.openExternal('https://www.google.com/search?q=' + query);
         });
@@ -82,21 +92,24 @@ submit.addEventListener('click', function () {
     else if (text.toLowerCase() === 'self destruct') {
         selfDestruct();
     }
-    else if (text.toLowerCase() === 'url') {
-        output.innerHTML = '<p>Type the URL of the website you want to open</p>';
-        input.value = '';
-        submit.addEventListener('click', function () {
-            var url = input.value;
-            // open the url in the default browser
-            shell.openExternal(url);
-        });
-        input.value = '';
+    // else if (text.toLowerCase() === 'url') {
+    //     output.innerHTML = '<p>Type the URL of the website you want to open</p>';
+    //     input.value = '';
+    //     submit.addEventListener('click', (): void => {
+    //         var url = input.value;
+    //         // open the url in the default browser
+    //         shell.openExternal(url);
+    //     });
+    //         input.value = '';
+    // }
+    else if (text.toLowerCase() === 'write') {
+        callDeepAI();
     }
     else {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
     }
 });
-var facts = [
+const facts = [
     "I was created by a programmer named Ryan.",
     "I was created in 2022.",
     "The world's oldest wooden wheel has been around for more than 5,000 years",
@@ -118,11 +131,11 @@ var facts = [
     "It takes a drop of water 90 days to travel the entire Mississippi River",
     "Lemons float, but limes sink",
 ];
-var jokes = [
+const jokes = [
     "What do you call a fake noodle? An Impasta.",
     "Why did the python cross the road? To eat the chicken.",
 ];
-var numbers = [
+const numbers = [
     1,
     2,
     3,
@@ -134,7 +147,7 @@ var numbers = [
     9,
     10,
 ];
-var greetings = [
+const greetings = [
     "Hello",
     "Hi",
     "Hey",
@@ -152,7 +165,7 @@ var greetings = [
     "How are you doing?",
     "How are you?",
 ];
-var letters = [
+const letters = [
     "A",
     "B",
     "C",
@@ -180,11 +193,11 @@ var letters = [
     "Y",
     "Z",
 ];
-var coin = [
+const coin = [
     "Heads",
     "Tails",
 ];
-var colors = [
+const colors = [
     "red",
     "orange",
     "yellow",
@@ -211,7 +224,7 @@ var colors = [
     "teal",
     "lime",
 ];
-var animals = [
+const animals = [
     "dog",
     "cat",
     "pig",
@@ -252,7 +265,7 @@ var animals = [
     "beaver",
     "hamster",
 ];
-var selfDestruct = function () {
+const selfDestruct = () => {
     output.innerHTML = '<p>Self-Destructing...</p>';
     // make the window go crazy, shake around, and then close
     setTimeout(function () {

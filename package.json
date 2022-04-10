@@ -6,8 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "build": "npx tsc src/ts/main.ts --outDir src/js && npx tsc src/ts/artemis.ts --outDir src/js",
-    "buildStart": "npx tsc src/ts/main.ts --outDir src/js && npm run start && npx tsc src/ts/artemis.ts --outDir src/js",
+    "build": "npx tsc -p tsconfig.json",
+    "buildStart": "npx tsc -p tsconfig.json && npm run start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish"
@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "about-window": "^1.15.2",
+    "deepai": "^1.0.21",
     "demotivator": "^7.0.1",
     "electron-squirrel-startup": "^1.0.0",
     "tailwindcss": "^3.0.23",
