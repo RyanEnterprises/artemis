@@ -1,5 +1,3 @@
-const input = document.getElementById('input box');
-const submit = document.getElementById('submit button');
 const output = document.getElementById('response');
 const header = document.getElementById('header');
 const versionNumber = 5.0;
@@ -16,7 +14,7 @@ let callDeepAI = () => {
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', () => {
     // get the text from the input box
-    var text = input.value;
+    let text = input.value;
     // clear the input box
     input.value = '';
     // run the function
