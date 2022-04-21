@@ -1,14 +1,20 @@
 {
-    "compilerOptions": {
-        "target": "es2019",
-        "outDir": "src/js/"
-    },
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "outDir": "src/js/",
+    "target": "es2019"
+  },
     "exclude": [
         "node_modules",
         "**/node_modules/*"
     ],
     "files": [
-        "src/ts/artemis.ts",
-        "src/ts/main.ts",
+      "src/ts/artemis.ts",
+      "src/ts/main.ts",
+    ],
+    "module": [
+        "es2019",
+        "node",
+        "dom"
     ]
 }

@@ -1,6 +1,8 @@
 const output = document.getElementById('response');
 const header = document.getElementById('header');
 const versionNumber = 5.0;
+import { insults } from 'demotivator';
+const { shell } = require('electron');
 let callDeepAI = () => {
     const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
     deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
@@ -56,7 +58,7 @@ submit.addEventListener('click', () => {
         output.innerHTML = '<p>' + greetings[Math.floor(Math.random() * greetings.length)] + '</p>';
     }
     else if (text.toLowerCase() === 'help') {
-        output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>Joke</b> - tells you a joke <br> <b>license</b> - displays the license information <br> <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br> Unsatisfied? use the "advanced help" command for a full list.';
+        output.innerHTML = 'Here are some helpful commands: <br> <br> <b>about</b> - displays information about the program <br> <b>clear</b> - clears the output box <br> <b>contact</b> - displays contact information <br> <b>exit</b> - closes the program <br> <b>fact</b> - gives a random fact <br> <b>github</b> - displays the github link <br> <b>help</b> - displays this message <br> <b>Joke</b> - tells you a joke <br> <b>license</b> - displays the license information <br> <b>Motivate</b> - Gives you a (de)Motivational quote using our sister service, (de)Motivator <b>Self-Destruct</b> - You\'ll see. <br> <b>version</b> - displays the version of the program <br> Unsatisfied? use the "advanced help" command for a full list.';
     }
     else if (text.toLowerCase() === 'hi') {
         output.innerHTML = '<p>' + greetings[Math.floor(Math.random() * greetings.length)] + '</p>';
@@ -66,6 +68,9 @@ submit.addEventListener('click', () => {
     }
     else if (text.toLowerCase() === 'license') {
         output.innerHTML = '<p> Licensed under the Apache License, Version 2.0 (the "License") <br> you may not use this file except in compliance with the License. <br> You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache.org</a> <br> Unless required by applicable law or agreed to in writing, software <br> distributed under the License is distributed on an "AS IS" BASIS, <br> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br> See the License for the specific language governing permissions and <br> limitations under the License. </p>';
+    }
+    else if (text.toLowerCase() === 'motivate') {
+        output.innerHTML = '<p>' + insults[Math.floor(Math.random() * insults.length)] + '</p>';
     }
     else if (text.toLowerCase() === 'open') {
         output.innerHTML = '<p>Type the URL of the website you want to open</p>';
