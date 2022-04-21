@@ -9,8 +9,8 @@ const header = document.getElementById('header');
 const versionNumber: float = 5.0;
 
 
+import { shell } from 'electron';
 import { insults, GenerateInsult } from 'demotivator';
-const { shell } = require('electron');
 
 
 let callDeepAI = () => {

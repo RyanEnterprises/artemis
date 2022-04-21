@@ -1,8 +1,8 @@
 const output = document.getElementById('response');
 const header = document.getElementById('header');
 const versionNumber = 5.0;
+import { shell } from 'electron';
 import { insults } from 'demotivator';
-const { shell } = require('electron');
 let callDeepAI = () => {
     const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
     deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
