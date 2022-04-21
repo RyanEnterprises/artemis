@@ -52,7 +52,7 @@
   "dependencies": {
     "about-window": "^1.15.2",
     "deepai": "^1.0.21",
-    "demotivator": "^7.0.1",
+    "demotivator": "^8.5.0",
     "electron-squirrel-startup": "^1.0.0",
     "serve": "^13.0.2",
     "tailwindcss": "^3.0.24",
