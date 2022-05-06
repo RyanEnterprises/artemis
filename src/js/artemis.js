@@ -1,18 +1,15 @@
 const output = document.getElementById('response');
 const header = document.getElementById('header');
 const versionNumber = 5.0;
-import { shell } from 'electron';
-import { insults } from 'demotivator';
-let callDeepAI = () => {
-    const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
-    deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
-    (async function () {
-        var resp = await deepai.callStandardApi("text-generator", {
-            text: "What is your name?",
-        });
-        output.innerHTML = resp;
-    })();
-};
+const input = document.getElementById('input box');
+const submit = document.getElementById('submitButton');
+const logo = document.querySelector('logo');
+// have the user type something in the box, and then when submit is clicked, trigger a function
+input.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        submit.click();
+    }
+});
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', () => {
     // get the text from the input box
@@ -69,9 +66,6 @@ submit.addEventListener('click', () => {
     else if (text.toLowerCase() === 'license') {
         output.innerHTML = '<p> Licensed under the Apache License, Version 2.0 (the "License") <br> you may not use this file except in compliance with the License. <br> You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache.org</a> <br> Unless required by applicable law or agreed to in writing, software <br> distributed under the License is distributed on an "AS IS" BASIS, <br> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br> See the License for the specific language governing permissions and <br> limitations under the License. </p>';
     }
-    else if (text.toLowerCase() === 'motivate') {
-        output.innerHTML = '<p>' + insults[Math.floor(Math.random() * insults.length)] + '</p>';
-    }
     else if (text.toLowerCase() === 'open') {
         output.innerHTML = '<p>Type the URL of the website you want to open</p>';
         input.value = '';
@@ -105,9 +99,9 @@ submit.addEventListener('click', () => {
     //     });
     //         input.value = '';
     // }
-    else if (text.toLowerCase() === 'write') {
-        callDeepAI();
-    }
+    // else if (text.toLowerCase() === 'write') {
+    //     callDeepAI();
+    // }
     else {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
     }
