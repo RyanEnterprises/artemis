@@ -9,8 +9,7 @@
         "**/node_modules/*"
     ],
     "files": [
-      "src/ts/artemis.ts",
-      "src/ts/main.ts",
+      "src/ts/artemis.ts"
     ],
     "module": [
         "es2019",

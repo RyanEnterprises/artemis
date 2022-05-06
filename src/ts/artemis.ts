@@ -1,3 +1,5 @@
+import { isThrowStatement } from "typescript";
+
 type float = number;
 type DOOBLEGOGGLE = Float32Array;
 type Input = HTMLInputElement;
@@ -18,6 +20,124 @@ input.addEventListener('keyup', function (event) {
     }
 });
 
+const theme = () => {
+    submit.addEventListener('click', () => {
+        const inputValue = input.value;
+        if (inputValue.toLowerCase() === 'example') {
+            output.innerHTML = '<p>Example themes: <br> <br> <b>dark</b> <br> <b>light</b> <br> <b>dark-blue</b> <br> <b>dark-green</b> <br> <b>dark-purple</b> <br> <b>dark-red</b> <br> <b>dark-yellow</b> <br> <b>light-blue</b> <br> <b>light-green</b> <br> <b>light-purple</b> <br> <b>light-red</b> <br> <b>light-yellow</b> <br> <b>purple</b> <br> <b>red</b> <br> <b>yellow</b> <br> <b>green</b> <br> <b>blue</b> <br> <b>orange</b> <br> <b>pink</b> <br> <b>teal</b> <br> <b>white</b> <br> <b>black</b> <br> <b>gray</b> <br> <b>grey</b> <br> <b>gray-dark</b> <br> <b>gray-light</b> <br> <b>gray-lighter</b> <br> <b>gray-darker</b> <br> <b>gray-darkest</b> <br> <b>gray-lightest</b> <br> <b>gray-darker-dark</b> <br> <b>gray-lightest-light</b> <br> <b>gray-darker-light</b> <br> <b>gray-lightest-dark</b> <br> <b>gray-darker-darker</b> <br> <b>gray-lightest-lighter</b> <br> <b>gray-darker-lighter</b> <br> <b>gray-lightest-darker</b> <br> <b>gray-darker-darkest</b>';
+        }
+        else if (inputValue.toLowerCase() === 'dark') {
+            output.innerHTML = '<p>Theme set to dark</p>';
+            nativeTheme().shouldUseDarkColors = true;
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light') {
+            output.innerHTML = '<p>Theme set to light</p>';
+            nativeTheme().shouldUseDarkColors = false;
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'dark-blue') {
+            output.innerHTML = '<p>Theme set to dark-blue</p>';
+            header.style.backgroundColor = '#00076B';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'dark-green') {
+            output.innerHTML = '<p>Theme set to dark-green</p>';
+            header.style.backgroundColor = '#00A300';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'dark-purple') {
+            output.innerHTML = '<p>Theme set to dark-purple</p>';
+            header.style.backgroundColor = '#7B00B7';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'dark-red') {
+            output.innerHTML = '<p>Theme set to dark-red</p>';
+            header.style.backgroundColor = '#B70000';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'dark-yellow') {
+            output.innerHTML = '<p>Theme set to dark-yellow</p>';
+            header.style.backgroundColor = '#E6E600';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light-blue') {
+            output.innerHTML = '<p>Theme set to light-blue</p>';
+            header.style.backgroundColor = '#00B2FF';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light-green') {
+            output.innerHTML = '<p>Theme set to light-green</p>';
+            header.style.backgroundColor = '#00FF00';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light-purple') {
+            output.innerHTML = '<p>Theme set to light-purple</p>';
+            header.style.backgroundColor = '#FF00FF';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light-red') {
+            output.innerHTML = '<p>Theme set to light-red</p>';
+            header.style.backgroundColor = '#FF0000';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'light-yellow') {
+            output.innerHTML = '<p>Theme set to light-yellow</p>';
+            header.style.backgroundColor = '#FFFF00';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'purple') {
+            output.innerHTML = '<p>Theme set to purple</p>';
+            header.style.backgroundColor = '#7B00B7';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'red') {
+            output.innerHTML = '<p>Theme set to red</p>';
+            header.style.backgroundColor = '#B70000';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'yellow') {
+            output.innerHTML = '<p>Theme set to yellow</p>';
+            header.style.backgroundColor = '#E6E600';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'green') {
+            output.innerHTML = '<p>Theme set to green</p>';
+            header.style.backgroundColor = '#00A300';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'blue') {
+            output.innerHTML = '<p>Theme set to blue</p>';
+            header.style.backgroundColor = '#00B2FF';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'orange') {
+            output.innerHTML = '<p>Theme set to orange</p>';
+            header.style.backgroundColor = '#FFA500';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'pink') {
+            output.innerHTML = '<p>Theme set to pink</p>';
+            header.style.backgroundColor = '#FF00FF';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'white') {
+            output.innerHTML = '<p>Theme set to white</p>';
+            header.style.backgroundColor = '#FFFFFF';
+            return;
+        }
+        else if (inputValue.toLowerCase() === 'black') {
+            output.innerHTML = '<p>Theme set to black</p>';
+            header.style.backgroundColor = '#000000';
+            return;
+        }
+        else {
+            output.innerHTML = '<p>Theme not found</p>';
+            return;
+        }
+    }
+)};
+
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', (): void => {
         // get the text from the input box
@@ -27,7 +147,7 @@ submit.addEventListener('click', (): void => {
         // run the function
         console.log(text);
         if (text.toLowerCase() === 'advanced help') {
-            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br>'
+            output.innerHTML = '<p><b>animal</b> - gives a random animal. <br> <b>about</b> - gives information about the program. <br> <b>clear</b> - clears the output box. <br> <b>contact</b> - gives contact information. <br> <b>coin</b> - gives you a coin flip <br> <b>exit</b> - exits the program. <br> <b>fact</b> - gives a random fact. <br> <b>github</b> - gives the github link. <br> <b>help</b> - gives basic help. <br> <b>joke</b> - gives a random joke. <br> <b>license</b> - gives the licencing information. <br> <b>Self Destruct</b> - You\'ll see <br> <b>System</b> - get lower level control of your system <br> <b>Theme</b> Set the theme of the app <br />'
         }
         else if (text.toLowerCase() === 'animal') {
             output.innerHTML = '<p>' + animals[Math.floor(Math.random() * animals.length)] + '</p>'
@@ -110,6 +230,10 @@ submit.addEventListener('click', (): void => {
         // else if (text.toLowerCase() === 'write') {
         //     callDeepAI();
         // }
+        else if (text.toLowerCase() === 'theme') {
+            output.innerHTML = '<p>Type the theme you want to use, if you need examples, type \'example\'</p>';
+            theme();
+        }
         else {
             output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
         }
