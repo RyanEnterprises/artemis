@@ -10,123 +10,6 @@ input.addEventListener('keyup', function (event) {
         submit.click();
     }
 });
-const theme = () => {
-    submit.addEventListener('click', () => {
-        const inputValue = input.value;
-        if (inputValue.toLowerCase() === 'example') {
-            output.innerHTML = '<p>Example themes: <br> <br> <b>dark</b> <br> <b>light</b> <br> <b>dark-blue</b> <br> <b>dark-green</b> <br> <b>dark-purple</b> <br> <b>dark-red</b> <br> <b>dark-yellow</b> <br> <b>light-blue</b> <br> <b>light-green</b> <br> <b>light-purple</b> <br> <b>light-red</b> <br> <b>light-yellow</b> <br> <b>purple</b> <br> <b>red</b> <br> <b>yellow</b> <br> <b>green</b> <br> <b>blue</b> <br> <b>orange</b> <br> <b>pink</b> <br> <b>teal</b> <br> <b>white</b> <br> <b>black</b> <br> <b>gray</b> <br> <b>grey</b> <br> <b>gray-dark</b> <br> <b>gray-light</b> <br> <b>gray-lighter</b> <br> <b>gray-darker</b> <br> <b>gray-darkest</b> <br> <b>gray-lightest</b> <br> <b>gray-darker-dark</b> <br> <b>gray-lightest-light</b> <br> <b>gray-darker-light</b> <br> <b>gray-lightest-dark</b> <br> <b>gray-darker-darker</b> <br> <b>gray-lightest-lighter</b> <br> <b>gray-darker-lighter</b> <br> <b>gray-lightest-darker</b> <br> <b>gray-darker-darkest</b>';
-        }
-        else if (inputValue.toLowerCase() === 'dark') {
-            output.innerHTML = '<p>Theme set to dark</p>';
-            nativeTheme().shouldUseDarkColors = true;
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light') {
-            output.innerHTML = '<p>Theme set to light</p>';
-            nativeTheme().shouldUseDarkColors = false;
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'dark-blue') {
-            output.innerHTML = '<p>Theme set to dark-blue</p>';
-            header.style.backgroundColor = '#00076B';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'dark-green') {
-            output.innerHTML = '<p>Theme set to dark-green</p>';
-            header.style.backgroundColor = '#00A300';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'dark-purple') {
-            output.innerHTML = '<p>Theme set to dark-purple</p>';
-            header.style.backgroundColor = '#7B00B7';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'dark-red') {
-            output.innerHTML = '<p>Theme set to dark-red</p>';
-            header.style.backgroundColor = '#B70000';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'dark-yellow') {
-            output.innerHTML = '<p>Theme set to dark-yellow</p>';
-            header.style.backgroundColor = '#E6E600';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light-blue') {
-            output.innerHTML = '<p>Theme set to light-blue</p>';
-            header.style.backgroundColor = '#00B2FF';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light-green') {
-            output.innerHTML = '<p>Theme set to light-green</p>';
-            header.style.backgroundColor = '#00FF00';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light-purple') {
-            output.innerHTML = '<p>Theme set to light-purple</p>';
-            header.style.backgroundColor = '#FF00FF';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light-red') {
-            output.innerHTML = '<p>Theme set to light-red</p>';
-            header.style.backgroundColor = '#FF0000';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'light-yellow') {
-            output.innerHTML = '<p>Theme set to light-yellow</p>';
-            header.style.backgroundColor = '#FFFF00';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'purple') {
-            output.innerHTML = '<p>Theme set to purple</p>';
-            header.style.backgroundColor = '#7B00B7';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'red') {
-            output.innerHTML = '<p>Theme set to red</p>';
-            header.style.backgroundColor = '#B70000';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'yellow') {
-            output.innerHTML = '<p>Theme set to yellow</p>';
-            header.style.backgroundColor = '#E6E600';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'green') {
-            output.innerHTML = '<p>Theme set to green</p>';
-            header.style.backgroundColor = '#00A300';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'blue') {
-            output.innerHTML = '<p>Theme set to blue</p>';
-            header.style.backgroundColor = '#00B2FF';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'orange') {
-            output.innerHTML = '<p>Theme set to orange</p>';
-            header.style.backgroundColor = '#FFA500';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'pink') {
-            output.innerHTML = '<p>Theme set to pink</p>';
-            header.style.backgroundColor = '#FF00FF';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'white') {
-            output.innerHTML = '<p>Theme set to white</p>';
-            header.style.backgroundColor = '#FFFFFF';
-            return;
-        }
-        else if (inputValue.toLowerCase() === 'black') {
-            output.innerHTML = '<p>Theme set to black</p>';
-            header.style.backgroundColor = '#000000';
-            return;
-        }
-        else {
-            output.innerHTML = '<p>Theme not found</p>';
-            return;
-        }
-    });
-};
 // when submit is clicked, take the text and run a function
 submit.addEventListener('click', () => {
     // get the text from the input box
@@ -152,6 +35,10 @@ submit.addEventListener('click', () => {
     }
     else if (text.toLowerCase() === 'coin') {
         output.innerHTML = '<p>' + coin[Math.floor(Math.random() * coin.length)] + '</p>';
+    }
+    else if (text.toLowerCase() === 'dark') {
+        output.innerHTML = '<p>Theme set to dark</p>';
+        header.style.backgroundColor = '#000000';
     }
     else if (text.toLowerCase() === 'exit') {
         output.innerHTML = '<p>Exiting...</p>';
@@ -220,8 +107,42 @@ submit.addEventListener('click', () => {
     //     callDeepAI();
     // }
     else if (text.toLowerCase() === 'theme') {
-        output.innerHTML = '<p>Type the theme you want to use, if you need examples, type \'example\'</p>';
-        theme();
+        output.innerHTML = '<p>Type the theme you want to use, by writing it as \'theme:dark\' or \'theme:red\' if you need examples, type \'theme:example\'</p>';
+    }
+    else if (text.toLowerCase() === 'theme:example') {
+        output.innerHTML = '<p>Theme:dark <br> Theme:red <br> Theme:blue <br> Theme:green <br> Theme:purple <br> Theme:pink <br> Theme:orange <br> Theme:yellow <br> Theme:black</p>';
+    }
+    else if (text.toLowerCase() === 'theme:dark') {
+        output.innerHTML = '<p>Theme set to dark</p>';
+        header.style.backgroundColor = '#000000';
+    }
+    else if (text.toLowerCase() === 'theme:red') {
+        output.innerHTML = '<p>Theme set to red</p>';
+        header.style.backgroundColor = '#ff0000';
+    }
+    else if (text.toLowerCase() === 'theme:orange') {
+        output.innerHTML = '<p>Theme set to orange</p>';
+        header.style.backgroundColor = '#ffa500';
+    }
+    else if (text.toLowerCase() === 'theme:yellow') {
+        output.innerHTML = '<p>Theme set to yellow</p>';
+        header.style.backgroundColor = '#ffff00';
+    }
+    else if (text.toLowerCase() === 'theme:green') {
+        output.innerHTML = '<p>Theme set to green</p>';
+        header.style.backgroundColor = '#00ff00';
+    }
+    else if (text.toLowerCase() === 'theme:blue') {
+        output.innerHTML = '<p>Theme set to blue</p>';
+        header.style.backgroundColor = '#0000ff';
+    }
+    else if (text.toLowerCase() === 'theme:purple') {
+        output.innerHTML = '<p>Theme set to purple</p>';
+        header.style.backgroundColor = '#800080';
+    }
+    else if (text.toLowerCase() === 'theme:pink') {
+        output.innerHTML = '<p>Theme set to pink</p>';
+        header.style.backgroundColor = '#ffc0cb';
     }
     else {
         output.innerHTML = '<p>I don\'t understand that command. Try Again.</p>';
