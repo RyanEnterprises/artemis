@@ -70,6 +70,9 @@ submit.addEventListener('click', () => {
     else if (text.toLowerCase() === 'license') {
         output.innerHTML = '<p> Licensed under the Apache License, Version 2.0 (the "License") <br> you may not use this file except in compliance with the License. <br> You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache.org</a> <br> Unless required by applicable law or agreed to in writing, software <br> distributed under the License is distributed on an "AS IS" BASIS, <br> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br> See the License for the specific language governing permissions and <br> limitations under the License. </p>';
     }
+    else if (text.toLowerCase() === 'motivate') {
+        output.innerHTML = insults[Math.floor(Math.random() * insults.length)];
+    }
     else if (text.toLowerCase() === 'open') {
         output.innerHTML = '<p>Type the URL of the website you want to open</p>';
         input.value = '';

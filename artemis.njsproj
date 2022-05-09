@@ -6,13 +6,16 @@
     <ProjectGuid>{fc5b395c-3b3e-4266-96a2-83de04e5ee9c}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectView>ShowAllFiles</ProjectView>
-    <StartupFile />
+    <StartupFile>./src/index.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <EnableTypeScript>true</EnableTypeScript>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <NodeExePath>C:\Program Files\nodejs\node.exe</NodeExePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -47,10 +50,8 @@
     <Content Include="src\images\IconBlack.svg" />
     <Content Include="src\images\IconWhite.svg" />
     <None Include="src\ts\artemis.ts" />
-    <None Include="src\ts\main.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="artemis" />
     <Folder Include="docs" />
     <Folder Include="images" />
     <Folder Include="scripts" />
