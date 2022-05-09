@@ -200,6 +200,8 @@ const menu = Menu.buildFromTemplate([
               ['node.js', '17.6.0'],
               ['electron', '18.0.1'],
               ['chromium', '100.0.4896.60'],
+              ['vscode', '1.32.1'],
+              ['electron-forge', '11.0.0'],
             ],})
         }
       }
