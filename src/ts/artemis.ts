@@ -1,5 +1,3 @@
-import { isThrowStatement } from "typescript";
-
 type float = number;
 type DOOBLEGOGGLE = Float32Array;
 type Input = HTMLInputElement;

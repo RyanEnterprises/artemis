@@ -197,11 +197,11 @@ const menu = Menu.buildFromTemplate([
             package_json_dir: path.join(__dirname, '../package.json'),
             use_version_info: [
               ['Artemis', '5.0.0'],
-              ['node.js', '17.6.0'],
-              ['electron', '18.0.1'],
-              ['chromium', '100.0.4896.60'],
-              ['vscode', '1.32.1'],
-              ['electron-forge', '11.0.0'],
+              ['node.js', '18.0.0'],
+              ['electron', '18.2.2'],
+              ['chromium', '100.0.4896.143'],
+              ['vscode', '1.67.1'],
+              ['electron-forge', '6.0.0-beta-.43'],
             ],})
         }
       }
