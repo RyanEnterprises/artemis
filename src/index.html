@@ -2,32 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0000f4"/>
     <title>Artemis</title>
     <link rel="icon" type="icon" href="images/FullColorIcon.ico" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="output.css" />
-    <script src="js/main.js" defer></script>
-    <script src="js/artemis.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <script type="module" src="./js/artemis.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
   </head>
   <body class="dark:bg-black dark:text-white">
-    <header class="bg-blue-800 text-white dark:bg-slate-800 text-center p-4" id="header">
-      <div>
+    <header class="bg-primary text-white dark:bg-slate-800 text-center p-10" id="header">
+      <div class="flex justify-center content-center">
         <h1 class="font-bold">
-          <a href="index.html" class="text-white center">
-            <img src="images\ArtemisLockupWhite.svg" alt="artemis logo" width="400px" class="p-4">
-          </a>
+            <img src="./images\ArtemisLockupWhite.svg" alt="artemis logo" width="400px" class="text-white p-4" id="logo">
         </h1>
       </div>
     </header>
     <div class="bg-white text-black dark:bg-black dark:text-white">
-    <input id="input box" class="shadow-2xl center p-4 text-black">
+      <div class="flex justify-center content-center pt-3">
+        <input id="input box" class="shadow-3xl center p-4 text-black px-5 border-2 rounded-lg border-black ">
+      </div>
     <br>
-    <input type="submit" id="submit button" class="border-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700"></input>
+    <div class="flex justify-center content-center">
+      <input type="submit" id="submitButton" class="px-10 bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 rounded-full"></input>
+    </div>
     <p id="response" class="text-center p-4">
-      My name is artemis. Type in the text box above and click "submit"
+      Type in the text box above and click "submit"
     </p>
     </div>
   </body>

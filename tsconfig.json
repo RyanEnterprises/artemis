@@ -1,14 +1,20 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "jsx": "preserve",
-        // "target": "es2019",
-        "strictFunctionTypes": true,
-        "watch": true,
-        "outDir": "src/js/"
-    },
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "outDir": "src/js/",
+    "target": "es2019"
+  },
     "exclude": [
         "node_modules",
         "**/node_modules/*"
+    ],
+    "files": [
+      "src/ts/artemis.ts"
+    ],
+    "module": [
+        "es2019",
+        "node",
+        "dom",
+        "commonjs"
     ]
 }

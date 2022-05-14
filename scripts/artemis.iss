@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Artemis"
-#define MyAppVersion "4.0"
+#define MyAppVersion "5.0.0"
 #define MyAppPublisher "Ryan Enterprises"
 #define MyAppURL "https://github.com/RyanEnterprises/artemis"
 #define MyAppExeName "artemis.exe"
@@ -10,7 +10,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{99C67F4E-DDEE-44F4-94F6-E7C829AF4E01}
+AppId={{0E9CD58F-00BE-4D4B-87B9-7BE888CF058A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -21,15 +21,15 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\rpmul\Documents\artemis\LICENSE
-InfoBeforeFile=C:\Users\rpmul\Documents\artemis\docs\pre-install.txt
-InfoAfterFile=C:\Users\rpmul\Documents\artemis\docs\post-install.txt
+LicenseFile=C:\Users\rpmul\source\repos\artemis\LICENSE
+InfoBeforeFile=C:\Users\rpmul\source\repos\artemis\docs\pre-install.txt
+InfoAfterFile=C:\Users\rpmul\source\repos\artemis\docs\post-install.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=C:\Users\rpmul\Documents\artemis\scripts
+OutputDir=C:\Users\rpmul\source\repos\artemis\scripts
 OutputBaseFilename=ArtemisUserInstaller
-SetupIconFile=C:\Users\rpmul\Documents\artemis\images\FullColorIcon.ico
+SetupIconFile=C:\Users\rpmul\source\repos\artemis\images\FullColorIcon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -41,8 +41,25 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\rpmul\Documents\artemis\out\artemis-win32-x64\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rpmul\Documents\artemis\out\artemis-win32-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\artemis.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\chrome_100_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\chrome_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\ffmpeg.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\LICENSES.chromium.html"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\resources.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\snapshot_blob.bin"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\Squirrel.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\v8_context_snapshot.bin"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\version"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\vk_swiftshader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\vk_swiftshader_icd.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

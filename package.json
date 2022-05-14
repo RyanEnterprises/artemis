@@ -1,17 +1,17 @@
 {
   "name": "artemis",
   "productName": "artemis",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "an AI that adapts to you",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "build": "npx tsc src/ts/main.ts --outDir src/js && npx tsc src/ts/artemis.ts --outDir src/js",
-    "buildStart": "npx tsc src/ts/main.ts --outDir src/js && npm run start && npx tsc src/ts/artemis.ts --outDir src/js",
+    "build": "npx tsc -p tsconfig.json",
+    "buildStart": "npx tsc -p tsconfig.json && npm run start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": {
@@ -50,9 +50,15 @@
     }
   },
   "dependencies": {
+    "about-window": "^1.15.2",
+    "deepai": "^1.0.21",
+    "demotivator": "^8.5.0",
     "electron-squirrel-startup": "^1.0.0",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.2"
+    "pkg": "^5.6.0",
+    "serve": "^13.0.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4",
+    "uadetect": "^2.0.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
@@ -60,6 +66,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "18.0.1"
+    "electron": "18.2.2"
   }
 }
