@@ -5,12 +5,12 @@
 #define MyAppVersion "5.0.0"
 #define MyAppPublisher "Ryan Enterprises"
 #define MyAppURL "https://github.com/RyanEnterprises/artemis"
-#define MyAppExeName "ArtemisUserInstaller.exe"
+#define MyAppExeName "artemis.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{8D117E1D-E7C7-4568-BB69-BD9B214E4C3B}
+AppId={{0E9CD58F-00BE-4D4B-87B9-7BE888CF058A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -28,7 +28,7 @@ InfoAfterFile=C:\Users\rpmul\source\repos\artemis\docs\post-install.txt
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=C:\Users\rpmul\source\repos\artemis\scripts
-OutputBaseFilename=artemis
+OutputBaseFilename=ArtemisUserInstaller
 SetupIconFile=C:\Users\rpmul\source\repos\artemis\images\FullColorIcon.ico
 Compression=lzma
 SolidCompression=yes
@@ -41,6 +41,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
+Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\artemis.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\chrome_100_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\rpmul\source\repos\artemis\out\artemis-win32-x64\chrome_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion

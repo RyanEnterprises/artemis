@@ -192,16 +192,23 @@ const menu = Menu.buildFromTemplate([
         label: 'About Artemis',
         click: () => {
           openAboutWindow({
-            icon_path: path.join(__dirname, 'images/ArtemisLockupFullColor.svg'),
-            copyright: 'Copyright © 2022 Ryan Enterprises',
-            package_json_dir: path.join(__dirname, '../package.json'),
-            use_version_info: [
+              icon_path: path.join(__dirname, 'images/ArtemisLockupFullColor.svg'),
+              copyright: 'Copyright © 2022 Ryan Enterprises',
+              package_json_dir: path.join(__dirname, '../package.json'),
+              use_version_info: [
               ['Artemis', '5.0.0'],
               ['node.js', '18.0.0'],
               ['electron', '18.2.2'],
               ['chromium', '100.0.4896.143'],
               ['vscode', '1.67.1'],
               ['electron-forge', '6.0.0-beta-.43'],
+              ['about-window', '1.15.2'],
+              ['deepai', '1.0.21'],
+              ['demotivator', '8.5.0'],
+              ['pkg', '5.6.0'],
+              ['tailwindcss', '3.0.24'],
+              ['typescript', '4.6.2'],
+              ['UADetect', '2.0.2']
             ],})
         }
       }
